@@ -1,4 +1,5 @@
 import FlowingMenu from "../components/FlowingMenu";
+import Navbar from "../components/NavBar";
 
 const demoItems = [
   {
@@ -26,6 +27,7 @@ const demoItems = [
 function Home() {
   return (
     <div style={{ width: "100%", height: "100%", background: "#060010" }}>
+      <Navbar showHome={false} />
       <FlowingMenu items={demoItems} />
     </div>
   );

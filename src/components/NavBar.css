@@ -1,0 +1,63 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  z-index: 1000;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  filter: invert(1);
+}
+
+.navbar-line {
+  width: 400px;
+  height: 1px;
+  background-color: #fff;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s;
+}
+
+.nav-icon img {
+  height: 24px;
+  width: 24px;
+  filter: invert(1);
+}
+
+.nav-icon:hover {
+  opacity: 0.7;
+}
+
+.copyright {
+  color: #fff;
+  font-size: 1rem;
+}
