@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
-
 import "./FlowingMenu.css";
 
 function FlowingMenu({ items = [] }) {
@@ -19,7 +19,6 @@ function MenuItem({ link, text, image }) {
   const itemRef = React.useRef(null);
   const marqueeRef = React.useRef(null);
   const marqueeInnerRef = React.useRef(null);
-
   const animationDefaults = { duration: 0.6, ease: "expo" };
 
   const findClosestEdge = (mouseX, mouseY, width, height) => {
@@ -41,7 +40,6 @@ function MenuItem({ link, text, image }) {
     const x = ev.clientX - rect.left;
     const y = ev.clientY - rect.top;
     const edge = findClosestEdge(x, y, rect.width, rect.height);
-
     gsap
       .timeline({ defaults: animationDefaults })
       .set(marqueeRef.current, { y: edge === "top" ? "-101%" : "101%" }, 0)
@@ -56,7 +54,6 @@ function MenuItem({ link, text, image }) {
     const x = ev.clientX - rect.left;
     const y = ev.clientY - rect.top;
     const edge = findClosestEdge(x, y, rect.width, rect.height);
-
     gsap
       .timeline({ defaults: animationDefaults })
       .to(marqueeRef.current, { y: edge === "top" ? "-101%" : "101%" }, 0)
@@ -75,14 +72,14 @@ function MenuItem({ link, text, image }) {
 
   return (
     <div className="menu__item" ref={itemRef}>
-      <a
+      <Link
         className="menu__item-link"
-        href={link}
+        to={link}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         {text}
-      </a>
+      </Link>
       <div className="marquee" ref={marqueeRef}>
         <div className="marquee__inner-wrap" ref={marqueeInnerRef}>
           <div className="marquee__inner" aria-hidden="true">
