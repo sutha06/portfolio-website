@@ -4,22 +4,22 @@ import Navbar from "../components/NavBar";
 const demoItems = [
   {
     link: "#",
-    text: "Mojave",
+    text: "SUTHA",
     image: "https://picsum.photos/600/400?random=1",
   },
   {
     link: "#",
-    text: "Sonoma",
+    text: "PROJECTS",
     image: "https://picsum.photos/600/400?random=2",
   },
   {
     link: "#",
-    text: "Monterey",
+    text: "SKILLS",
     image: "https://picsum.photos/600/400?random=3",
   },
   {
     link: "#",
-    text: "Sequoia",
+    text: "CONTACT",
     image: "https://picsum.photos/600/400?random=4",
   },
 ];

@@ -42,9 +42,10 @@
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  font-weight: 600;
+  font-weight: 500; /* already correct */
   color: #fff;
-  font-size: 4vh;
+  font-size: 5vh;
+  font-family: "Montserrat", sans-serif; /* add this line */
 }
 
 .menu__item-link:hover {
@@ -88,10 +89,11 @@
   color: #060010;
   white-space: nowrap;
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 4vh;
+  font-weight: 500; /* changed from 400 to 500 */
+  font-size: 5vh;
   line-height: 1.2;
   padding: 1vh 1vw 0;
+  font-family: "Montserrat", sans-serif; /* add this line */
 }
 
 .marquee__img {
