@@ -4,14 +4,14 @@ function Navbar({ showHome = false }) {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <a href="/" className="logo">
-          <img src="/logo.png" alt="Logo" />
-        </a>
-        <div className="navbar-line"></div>
+        <div className="logo">
+          <img src="/images/logo.png" alt="Logo" />
+        </div>
+        <div className="navbar-line-left"></div> {/* LEFT LINE */}
       </div>
 
       <div className="navbar-right">
-        <div className="navbar-line"></div>
+        <div className="navbar-line-right"></div> {/* RIGHT LINE */}
         {showHome && (
           <a href="/" className="nav-link">
             HOME
