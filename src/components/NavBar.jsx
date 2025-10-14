@@ -1,22 +1,24 @@
-import "./Navbar.css";
+import { Link } from "react-router-dom";
+import "./NavBar.css";
 
 function Navbar({ showHome = false }) {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <div className="logo">
-          <img src="/images/logo.png" alt="Logo" />
-        </div>
-        <div className="navbar-line-left"></div> {/* LEFT LINE */}
+        {showHome ? (
+          <Link to="/" className="home-link">
+            HOME
+          </Link>
+        ) : (
+          <div className="logo">
+            <img src="/images/logo.png" alt="Logo" />
+          </div>
+        )}
+        <div className="navbar-line-left"></div>
       </div>
 
       <div className="navbar-right">
-        <div className="navbar-line-right"></div> {/* RIGHT LINE */}
-        {showHome && (
-          <a href="/" className="nav-link">
-            HOME
-          </a>
-        )}
+        <div className="navbar-line-right"></div>
         <a
           href="https://github.com/yourusername"
           target="_blank"
