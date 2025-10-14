@@ -1,0 +1,25 @@
+import Navbar from "../components/NavBar";
+
+function About() {
+  return (
+    <div style={{ width: "100%", height: "100vh", background: "#060010" }}>
+      <Navbar showHome={true} />
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100%",
+          color: "#fff",
+          fontSize: "4rem",
+          fontFamily: "Montserrat, sans-serif",
+          fontWeight: "500",
+        }}
+      >
+        SUTHA
+      </div>
+    </div>
+  );
+}
+
+export default About;
