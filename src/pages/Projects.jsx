@@ -1,6 +1,8 @@
+import React from "react";
 import Navbar from "../components/NavBar";
+import transition from "../components/Transition";
 
-function Projects() {
+const Projects = () => {
   return (
     <div style={{ width: "100%", height: "100vh", background: "#060010" }}>
       <Navbar showHome={true} />
@@ -20,6 +22,6 @@ function Projects() {
       </div>
     </div>
   );
-}
+};
 
-export default Projects;
+export default transition(Projects);
