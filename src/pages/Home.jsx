@@ -1,36 +1,37 @@
 import FlowingMenu from "../components/FlowingMenu";
 import Navbar from "../components/NavBar";
+import transition from "../components/Transition";
 
 const demoItems = [
   {
-    link: "#",
+    link: "/about",
     text: "SUTHA",
     image: "https://picsum.photos/600/400?random=1",
   },
   {
-    link: "#",
+    link: "/projects",
     text: "PROJECTS",
     image: "https://picsum.photos/600/400?random=2",
   },
   {
-    link: "#",
+    link: "/skills",
     text: "SKILLS",
     image: "https://picsum.photos/600/400?random=3",
   },
   {
-    link: "#",
+    link: "/contact",
     text: "CONTACT",
     image: "https://picsum.photos/600/400?random=4",
   },
 ];
 
-function Home() {
+const Home = () => {
   return (
     <div style={{ width: "100%", height: "100%", background: "#060010" }}>
       <Navbar showHome={false} />
       <FlowingMenu items={demoItems} />
     </div>
   );
-}
+};
 
-export default Home;
+export default transition(Home);

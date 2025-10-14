@@ -1,6 +1,8 @@
+import React from "react";
 import Navbar from "../components/NavBar";
+import transition from "../components/Transition";
 
-function About() {
+const About = () => {
   return (
     <div style={{ width: "100%", height: "100vh", background: "#060010" }}>
       <Navbar showHome={true} />
@@ -20,6 +22,6 @@ function About() {
       </div>
     </div>
   );
-}
+};
 
-export default About;
+export default transition(About);
