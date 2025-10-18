@@ -142,7 +142,7 @@ const CertificationsCarousel = ({ containerRef }) => {
     {
       title: "Microsoft Azure administrator Certificate",
       image: "/images/azure.png",
-      status: "Completed",
+      status: "In Progress",
       date: "January 2026",
     },
   ];
