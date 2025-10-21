@@ -102,7 +102,7 @@ const CertificationsCarousel = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"],
+    offset: ["start start", "end start"],
   });
 
   const certifications = [
@@ -147,13 +147,13 @@ const CertificationsCarousel = () => {
 
       <div
         ref={ref}
-        style={{ display: "flex", flexDirection: "column", gap: "12rem" }}
+        style={{ display: "flex", flexDirection: "column", gap: "3rem" }}
       >
         {certifications.map((cert, index) => (
           <CertificationCard
             key={index}
             scrollYProgress={scrollYProgress}
-            position={index}
+            position={index + 1}
             numItems={certifications.length}
             title={cert.title}
             image={cert.image}
@@ -231,27 +231,17 @@ const CertificationCard = ({
   date,
 }) => {
   const stepSize = 1 / numItems;
-  const start = stepSize * position;
-  const end = stepSize * (position + 1);
+  const end = stepSize * position;
+  const start = end - stepSize;
 
-  const opacity = useTransform(
-    scrollYProgress,
-    [start, start + 0.2, end - 0.2, end],
-    [0, 1, 1, 0.3]
-  );
-  const scale = useTransform(
-    scrollYProgress,
-    [start, start + 0.2, end - 0.2, end],
-    [0.85, 1, 1, 0.9]
-  );
-  const y = useTransform(scrollYProgress, [start, start + 0.2], [50, 0]);
+  const opacity = useTransform(scrollYProgress, [start, end], [1, 0]);
+  const scale = useTransform(scrollYProgress, [start, end], [1, 0.75]);
 
   return (
     <motion.div
       style={{
         opacity,
         scale,
-        y,
         background: "rgba(255, 255, 255, 0.05)",
         border: "1px solid rgba(255, 255, 255, 0.1)",
         borderRadius: "16px",
