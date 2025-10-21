@@ -6,7 +6,7 @@ import DotExpandButton from "../components/DotExpandButton";
 
 const About = () => {
   return (
-    <div style={{ width: "100%", background: "#060010" }}>
+    <div style={{ width: "100%", background: "#171717" }}>
       <Navbar showHome={true} />
 
       {/* LEFT SIDE - Fixed Photo */}
@@ -36,7 +36,7 @@ const About = () => {
         style={{
           marginLeft: "50%",
           padding: "4rem",
-          color: "#fff",
+          color: "#fefefe",
           position: "relative",
           zIndex: 2,
         }}
@@ -56,6 +56,7 @@ const About = () => {
               letterSpacing: "0.2em",
               marginBottom: "2rem",
               textAlign: "right",
+              color: "#b5b5b5",
             }}
           >
             ABOUT ME
@@ -67,6 +68,7 @@ const About = () => {
               fontFamily: "Montserrat, sans-serif",
               fontWeight: "600",
               marginBottom: "2rem",
+              color: "#fefefe",
             }}
           >
             Suthakaran Siva
@@ -78,6 +80,7 @@ const About = () => {
               lineHeight: "1.8",
               fontFamily: "Montserrat, sans-serif",
               marginBottom: "2rem",
+              color: "#fefefe",
             }}
           >
             I am seeking an Entry-Level / Internship in IT Support / System
@@ -140,6 +143,7 @@ const CertificationsCarousel = () => {
           fontWeight: "500",
           marginBottom: "3rem",
           textAlign: "left",
+          color: "#fefefe",
         }}
       >
         CERTIFICATIONS
@@ -179,7 +183,7 @@ const CertificationsCarousel = () => {
         <span
           style={{
             fontSize: "0.9rem",
-            color: "rgba(255, 255, 255, 0.5)",
+            color: "#b5b5b5",
             fontFamily: "Montserrat, sans-serif",
             textTransform: "uppercase",
             letterSpacing: "0.1em",
@@ -199,7 +203,7 @@ const CertificationsCarousel = () => {
         >
           <path
             d="M12 5L12 19M12 19L19 12M12 19L5 12"
-            stroke="rgba(255, 255, 255, 0.5)"
+            stroke="#b5b5b5"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -242,8 +246,8 @@ const CertificationCard = ({
       style={{
         opacity,
         scale,
-        background: "rgba(255, 255, 255, 0.05)",
-        border: "1px solid rgba(255, 255, 255, 0.1)",
+        background: "rgba(254, 254, 254, 0.05)",
+        border: "1px solid rgba(181, 181, 181, 0.2)",
         borderRadius: "16px",
         padding: "3rem",
         display: "flex",
@@ -264,6 +268,7 @@ const CertificationCard = ({
           fontWeight: "500",
           textAlign: "center",
           margin: 0,
+          color: "#fefefe",
         }}
       >
         {title}
@@ -291,9 +296,7 @@ const CertificationCard = ({
         >
           {status}
         </span>
-        <span style={{ fontSize: "0.9rem", color: "rgba(255, 255, 255, 0.6)" }}>
-          {date}
-        </span>
+        <span style={{ fontSize: "0.9rem", color: "#b5b5b5" }}>{date}</span>
       </div>
     </motion.div>
   );
