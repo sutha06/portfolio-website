@@ -147,7 +147,7 @@ const CertificationsCarousel = () => {
 
       <div
         ref={ref}
-        style={{ display: "flex", flexDirection: "column", gap: "3rem" }}
+        style={{ display: "flex", flexDirection: "column", gap: "12rem" }}
       >
         {certifications.map((cert, index) => (
           <CertificationCard
@@ -231,25 +231,27 @@ const CertificationCard = ({
   date,
 }) => {
   const stepSize = 1 / numItems;
-  const end = stepSize * (position + 1);
   const start = stepSize * position;
+  const end = stepSize * (position + 1);
 
   const opacity = useTransform(
     scrollYProgress,
-    [start - 0.1, start + 0.1, end - 0.1, end],
-    [0.3, 1, 1, 0.3]
+    [start, start + 0.2, end - 0.2, end],
+    [0, 1, 1, 0.3]
   );
   const scale = useTransform(
     scrollYProgress,
-    [start - 0.1, start + 0.1, end - 0.1, end],
-    [0.8, 1, 1, 0.8]
+    [start, start + 0.2, end - 0.2, end],
+    [0.85, 1, 1, 0.9]
   );
+  const y = useTransform(scrollYProgress, [start, start + 0.2], [50, 0]);
 
   return (
     <motion.div
       style={{
         opacity,
         scale,
+        y,
         background: "rgba(255, 255, 255, 0.05)",
         border: "1px solid rgba(255, 255, 255, 0.1)",
         borderRadius: "16px",

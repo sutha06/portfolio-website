@@ -91,6 +91,18 @@ const Projects = () => {
               borderBottom: "1px solid rgba(161, 161, 170, 0.3)",
               padding: "0.75rem",
               paddingBottom: "2.25rem",
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateX(10px)";
+              e.currentTarget.style.borderBottomColor =
+                "rgba(255, 255, 255, 0.4)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateX(0)";
+              e.currentTarget.style.borderBottomColor =
+                "rgba(161, 161, 170, 0.3)";
             }}
           >
             <div>
@@ -130,10 +142,29 @@ const Projects = () => {
                 color: "rgba(161, 161, 170, 1)",
                 textDecoration: "none",
                 fontFamily: "Montserrat, sans-serif",
-                transition: "color 0.3s",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = "#fff";
+                e.currentTarget.querySelector(".arrow").style.transform =
+                  "translateX(6px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = "rgba(161, 161, 170, 1)";
+                e.currentTarget.querySelector(".arrow").style.transform =
+                  "translateX(0)";
               }}
             >
-              View Project →
+              View Project
+              <span
+                className="arrow"
+                style={{
+                  display: "inline-block",
+                  transition: "transform 0.3s ease",
+                }}
+              >
+                →
+              </span>
             </a>
           </div>
         ))}

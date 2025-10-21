@@ -9,32 +9,34 @@ const Skills = () => {
       style={{
         background: "#060010",
         minHeight: "100vh",
-        padding: "8rem 6rem",
+        padding: "0 6rem",
+        paddingTop: "12rem",
+        paddingBottom: "4rem",
       }}
     >
       <Navbar showHome={true} />
 
-      <div style={{ maxWidth: "1400px", margin: "0 auto", paddingTop: "8rem" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <h1
           style={{
-            fontSize: "6rem",
+            fontSize: "4rem",
             fontWeight: "700",
             color: "#fff",
             fontFamily: "Montserrat, sans-serif",
-            marginBottom: "8rem",
+            marginBottom: "6rem",
           }}
         >
           SKILLS
         </h1>
 
-        <div style={{ marginBottom: "6rem" }}>
+        <div style={{ marginBottom: "5rem" }}>
           <h3
             style={{
-              fontSize: "2rem",
+              fontSize: "1.5rem",
               fontWeight: "600",
               color: "#fff",
               fontFamily: "Montserrat, sans-serif",
-              marginBottom: "2rem",
+              marginBottom: "1.5rem",
             }}
           >
             System Administration
@@ -51,14 +53,14 @@ const Skills = () => {
           </ScrollReveal>
         </div>
 
-        <div style={{ marginBottom: "6rem" }}>
+        <div style={{ marginBottom: "5rem" }}>
           <h3
             style={{
-              fontSize: "2rem",
+              fontSize: "1.5rem",
               fontWeight: "600",
               color: "#fff",
               fontFamily: "Montserrat, sans-serif",
-              marginBottom: "2rem",
+              marginBottom: "1.5rem",
             }}
           >
             Cloud & Virtualization
@@ -75,14 +77,14 @@ const Skills = () => {
           </ScrollReveal>
         </div>
 
-        <div style={{ marginBottom: "6rem" }}>
+        <div style={{ marginBottom: "5rem" }}>
           <h3
             style={{
-              fontSize: "2rem",
+              fontSize: "1.5rem",
               fontWeight: "600",
               color: "#fff",
               fontFamily: "Montserrat, sans-serif",
-              marginBottom: "2rem",
+              marginBottom: "1.5rem",
             }}
           >
             Automation & Scripting
@@ -99,14 +101,14 @@ const Skills = () => {
           </ScrollReveal>
         </div>
 
-        <div style={{ marginBottom: "6rem" }}>
+        <div style={{ marginBottom: "5rem" }}>
           <h3
             style={{
-              fontSize: "2rem",
+              fontSize: "1.5rem",
               fontWeight: "600",
               color: "#fff",
               fontFamily: "Montserrat, sans-serif",
-              marginBottom: "2rem",
+              marginBottom: "1.5rem",
             }}
           >
             Networking & Security
@@ -123,14 +125,14 @@ const Skills = () => {
           </ScrollReveal>
         </div>
 
-        <div style={{ marginBottom: "6rem" }}>
+        <div style={{ marginBottom: "5rem" }}>
           <h3
             style={{
-              fontSize: "2rem",
+              fontSize: "1.5rem",
               fontWeight: "600",
               color: "#fff",
               fontFamily: "Montserrat, sans-serif",
-              marginBottom: "2rem",
+              marginBottom: "1.5rem",
             }}
           >
             Monitoring & Management Tools
@@ -147,14 +149,14 @@ const Skills = () => {
           </ScrollReveal>
         </div>
 
-        <div style={{ marginBottom: "6rem" }}>
+        <div style={{ marginBottom: "5rem" }}>
           <h3
             style={{
-              fontSize: "2rem",
+              fontSize: "1.5rem",
               fontWeight: "600",
               color: "#fff",
               fontFamily: "Montserrat, sans-serif",
-              marginBottom: "2rem",
+              marginBottom: "1.5rem",
             }}
           >
             Help Desk & Support
