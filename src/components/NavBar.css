@@ -23,7 +23,7 @@
 }
 
 .home-link {
-  color: #fff;
+  color: #fefefe;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
@@ -37,14 +37,15 @@
 }
 
 .navbar-logo img {
-  height: 50px;
+  height: 80px;
   width: auto;
   object-fit: contain;
-  transition: opacity 0.3s;
+  transition: all 0.3s ease;
 }
 
 .navbar-logo img:hover {
   opacity: 0.8;
+  filter: drop-shadow(0 0 10px rgba(254, 254, 254, 0.3));
 }
 
 .navbar-links {
@@ -57,18 +58,18 @@
 }
 
 .nav-link {
-  color: #fff;
+  color: #b5b5b5;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.1em;
-  transition: opacity 0.3s;
+  transition: color 0.3s;
   white-space: nowrap;
 }
 
 .nav-link:hover {
-  opacity: 0.7;
+  color: #fefefe;
 }
 
 .navbar-copyright {
@@ -76,7 +77,7 @@
 }
 
 .navbar-copyright span {
-  color: #fff;
+  color: #fefefe;
   font-size: 1rem;
   font-weight: 300;
   font-family: "Montserrat", sans-serif;
@@ -91,7 +92,7 @@
   }
 
   .navbar-logo img {
-    height: 40px;
+    height: 65px;
   }
 
   .home-link {
@@ -118,7 +119,7 @@
   }
 
   .navbar-logo img {
-    height: 35px;
+    height: 50px;
   }
 
   .home-link {
@@ -145,7 +146,7 @@
   }
 
   .navbar-logo img {
-    height: 30px;
+    height: 40px;
   }
 
   .home-link {

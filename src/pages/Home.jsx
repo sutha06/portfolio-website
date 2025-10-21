@@ -27,7 +27,7 @@ const demoItems = [
 
 const Home = () => {
   return (
-    <div style={{ width: "100%", minHeight: "100vh", background: "#060010" }}>
+    <div style={{ width: "100%", minHeight: "100vh", background: "#171717" }}>
       <Navbar showHome={false} />
       <FlowingMenu items={demoItems} />
     </div>
