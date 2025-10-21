@@ -5,119 +5,104 @@ import transition from "../components/Transition";
 import DotExpandButton from "../components/DotExpandButton";
 
 const About = () => {
-  const containerRef = useRef(null);
-
   return (
-    <div style={{ width: "100%", minHeight: "100vh", background: "#060010" }}>
+    <div style={{ width: "100%", background: "#060010" }}>
       <Navbar showHome={true} />
 
+      {/* LEFT SIDE - Fixed Photo */}
       <div
         style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          minHeight: "100vh",
-          gap: "0",
+          position: "fixed",
+          left: 0,
+          top: 0,
+          width: "50%",
+          height: "100vh",
+          zIndex: 1,
         }}
       >
-        {/* LEFT SIDE - Sticky Photo and Text */}
-        <div
+        <img
+          src="/images/me.png"
+          alt="Suthakaran Siva"
           style={{
-            position: "sticky",
-            top: 0,
-            height: "100vh",
-            display: "flex",
-            flexDirection: "column",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
           }}
-        >
-          <div style={{ flex: 1, overflow: "hidden" }}>
-            <img
-              src="/images/me.png"
-              alt="Suthakaran Siva"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-        </div>
+        />
+      </div>
 
-        {/* RIGHT SIDE - Scrollable Content */}
+      {/* RIGHT SIDE - Scrollable Content */}
+      <div
+        style={{
+          marginLeft: "50%",
+          padding: "4rem",
+          color: "#fff",
+          position: "relative",
+          zIndex: 2,
+        }}
+      >
+        {/* About Me Section */}
         <div
-          ref={containerRef}
           style={{
-            padding: "4rem",
-            color: "#fff",
+            minHeight: "100vh",
             display: "flex",
             flexDirection: "column",
-            overflowY: "auto",
-            height: "100vh",
+            justifyContent: "center",
           }}
         >
-          {/* About Me Section */}
-          <div
+          <p
             style={{
-              minHeight: "82vh",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
+              fontSize: "0.9rem",
+              letterSpacing: "0.2em",
+              marginBottom: "2rem",
+              textAlign: "right",
             }}
           >
-            <p
-              style={{
-                fontSize: "0.9rem",
-                letterSpacing: "0.2em",
-                marginBottom: "2rem",
-                textAlign: "right",
-              }}
-            >
-              ABOUT ME
-            </p>
+            ABOUT ME
+          </p>
 
-            <h1
-              style={{
-                fontSize: "3.5rem",
-                fontFamily: "Montserrat, sans-serif",
-                fontWeight: "600",
-                marginBottom: "2rem",
-              }}
-            >
-              Suthakaran Siva
-            </h1>
+          <h1
+            style={{
+              fontSize: "3.5rem",
+              fontFamily: "Montserrat, sans-serif",
+              fontWeight: "600",
+              marginBottom: "2rem",
+            }}
+          >
+            Suthakaran Siva
+          </h1>
 
-            <p
-              style={{
-                fontSize: "1.1rem",
-                lineHeight: "1.8",
-                fontFamily: "Montserrat, sans-serif",
-                marginBottom: "2rem",
-              }}
-            >
-              I am seeking an Entry-Level / Internship in IT Support / System
-              Administration. My strong foundational interest covers networking,
-              operating systems, configuration management, and cloud
-              technologies. I enjoy working with new technologies and am eager
-              to apply my practical skills to solve problems and grow within a
-              professional environment.
-            </p>
+          <p
+            style={{
+              fontSize: "1.1rem",
+              lineHeight: "1.8",
+              fontFamily: "Montserrat, sans-serif",
+              marginBottom: "2rem",
+            }}
+          >
+            I am seeking an Entry-Level / Internship in IT Support / System
+            Administration. My strong foundational interest covers networking,
+            operating systems, configuration management, and cloud technologies.
+            I enjoy working with new technologies and am eager to apply my
+            practical skills to solve problems and grow within a professional
+            environment.
+          </p>
 
-            <DotExpandButton href="/Suthakaran Resume.pdf" text="View Resume" />
-          </div>
-
-          {/* Certifications Section */}
-          <CertificationsCarousel containerRef={containerRef} />
+          <DotExpandButton href="/Suthakaran Resume.pdf" text="View Resume" />
         </div>
+
+        {/* Certifications Section */}
+        <CertificationsCarousel />
       </div>
     </div>
   );
 };
 
-const CertificationsCarousel = ({ containerRef }) => {
+const CertificationsCarousel = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    container: containerRef,
-    offset: ["start start", "end start"],
+    offset: ["start end", "end start"],
   });
 
   const certifications = [
@@ -125,7 +110,7 @@ const CertificationsCarousel = ({ containerRef }) => {
       title: "Google IT Support Professional Certificate",
       image: "/images/GCC_badge_IT_Support.png",
       status: "Completed",
-      date: "Sepectember 2025",
+      date: "September 2025",
     },
     {
       title: "CompTIA Network+ Certificate",
@@ -140,7 +125,7 @@ const CertificationsCarousel = ({ containerRef }) => {
       date: "Expected December 2025",
     },
     {
-      title: "Microsoft Azure administrator Certificate",
+      title: "Microsoft Azure Administrator Certificate",
       image: "/images/azure.png",
       status: "In Progress",
       date: "January 2026",
@@ -148,7 +133,7 @@ const CertificationsCarousel = ({ containerRef }) => {
   ];
 
   return (
-    <div style={{ marginTop: "4rem" }}>
+    <div style={{ marginTop: "4rem", paddingBottom: "4rem" }}>
       <h2
         style={{
           fontSize: "2rem",
@@ -162,14 +147,14 @@ const CertificationsCarousel = ({ containerRef }) => {
 
       <div
         ref={ref}
-        style={{ display: "flex", flexDirection: "column", gap: "2rem" }}
+        style={{ display: "flex", flexDirection: "column", gap: "3rem" }}
       >
         {certifications.map((cert, index) => (
           <CertificationCard
             key={index}
             scrollYProgress={scrollYProgress}
-            position={index + 1}
-            numItems={4}
+            position={index}
+            numItems={certifications.length}
             title={cert.title}
             image={cert.image}
             status={cert.status}
@@ -179,7 +164,59 @@ const CertificationsCarousel = ({ containerRef }) => {
       </div>
 
       {/* Buffer space at bottom */}
-      <div style={{ height: "8rem" }} />
+      <div style={{ height: "4rem" }} />
+
+      {/* Scroll Up Indicator */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "1rem",
+          paddingBottom: "4rem",
+        }}
+      >
+        <span
+          style={{
+            fontSize: "0.9rem",
+            color: "rgba(255, 255, 255, 0.5)",
+            fontFamily: "Montserrat, sans-serif",
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+          }}
+        >
+          Scroll Up
+        </span>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          style={{
+            animation: "bounce 2s infinite",
+            transform: "rotate(180deg)",
+          }}
+        >
+          <path
+            d="M12 5L12 19M12 19L19 12M12 19L5 12"
+            stroke="rgba(255, 255, 255, 0.5)"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
+
+      <style>{`
+        @keyframes bounce {
+          0%, 100% {
+            transform: translateY(0) rotate(180deg);
+          }
+          50% {
+            transform: translateY(-10px) rotate(180deg);
+          }
+        }
+      `}</style>
     </div>
   );
 };
@@ -194,10 +231,19 @@ const CertificationCard = ({
   date,
 }) => {
   const stepSize = 1 / numItems;
-  const end = stepSize * position;
-  const start = end - stepSize;
-  const opacity = useTransform(scrollYProgress, [start, end], [1, 0]);
-  const scale = useTransform(scrollYProgress, [start, end], [1, 0.75]);
+  const end = stepSize * (position + 1);
+  const start = stepSize * position;
+
+  const opacity = useTransform(
+    scrollYProgress,
+    [start - 0.1, start + 0.1, end - 0.1, end],
+    [0.3, 1, 1, 0.3]
+  );
+  const scale = useTransform(
+    scrollYProgress,
+    [start - 0.1, start + 0.1, end - 0.1, end],
+    [0.8, 1, 1, 0.8]
+  );
 
   return (
     <motion.div
