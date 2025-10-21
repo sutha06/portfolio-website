@@ -6,89 +6,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 4rem;
+  padding: 3rem 4rem;
   z-index: 1000;
+  background: transparent;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-.navbar-left {
+.navbar-logo {
+  flex-shrink: 0;
+}
+
+.navbar-logo a {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-}
-
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  padding: 0 !important;
-  margin: 0 !important;
-  line-height: 0;
-  width: fit-content;
-}
-
-.logo img {
-  height: 35px;
-  width: 35px;
-  object-fit: contain;
-  display: block;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar-line-left {
-  width: 80px;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.navbar-line-right {
-  width: 180px;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.nav-link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  transition: opacity 0.3s;
-}
-
-.nav-link:hover {
-  opacity: 0.7;
-}
-
-.nav-icon {
-  display: flex;
-  align-items: center;
-  transition: opacity 0.3s;
-  padding: 24px;
-}
-
-.nav-icon img {
-  height: 24px;
-  width: 24px;
-  object-fit: contain;
-  filter: invert(1) brightness(2);
-}
-
-.nav-icon:hover {
-  opacity: 0.7;
-}
-
-.copyright {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 0.05em;
-  white-space: nowrap;
 }
 
 .home-link {
@@ -105,54 +36,77 @@
   opacity: 0.7;
 }
 
-/* Laptop/Tablet - 1440px to 1024px */
-@media (max-width: 1440px) {
-  .navbar {
-    padding: 2rem 3rem;
-  }
-
-  .navbar-line-left {
-    width: 400px;
-  }
-
-  .navbar-line-right {
-    width: 150px;
-  }
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity 0.3s;
 }
 
-/* Tablet - 1024px to 768px */
+.navbar-logo img:hover {
+  opacity: 0.8;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.1em;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+.navbar-copyright {
+  flex-shrink: 0;
+}
+
+.navbar-copyright span {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* Tablet - 1024px and below */
 @media (max-width: 1024px) {
   .navbar {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 2.5rem;
   }
 
-  .logo img {
-    height: 30px;
-    width: 30px;
+  .navbar-logo img {
+    height: 40px;
   }
 
-  .navbar-line-left {
-    width: 300px;
+  .home-link {
+    font-size: 1.1rem;
   }
 
-  .navbar-line-right {
-    width: 120px;
+  .navbar-links {
+    gap: 2rem;
   }
 
-  .nav-icon {
-    padding: 18px;
+  .nav-link {
+    font-size: 0.85rem;
   }
 
-  .nav-icon img {
-    height: 20px;
-    width: 20px;
-  }
-
-  .navbar-right {
-    gap: 1.2rem;
-  }
-
-  .copyright {
+  .navbar-copyright span {
     font-size: 0.9rem;
   }
 }
@@ -163,37 +117,23 @@
     padding: 1rem 1.5rem;
   }
 
-  .navbar-left {
-    gap: 0.5rem;
+  .navbar-logo img {
+    height: 35px;
   }
 
-  .navbar-right {
-    gap: 0.8rem;
+  .home-link {
+    font-size: 1rem;
   }
 
-  .logo img {
-    height: 25px;
-    width: 25px;
+  .navbar-links {
+    gap: 1.5rem;
   }
 
-  .navbar-line-left {
-    width: 150px;
+  .nav-link {
+    font-size: 0.75rem;
   }
 
-  .navbar-line-right {
-    width: 80px;
-  }
-
-  .nav-icon {
-    padding: 12px;
-  }
-
-  .nav-icon img {
-    height: 18px;
-    width: 18px;
-  }
-
-  .copyright {
+  .navbar-copyright span {
     font-size: 0.85rem;
   }
 }
@@ -204,37 +144,28 @@
     padding: 1rem;
   }
 
-  .navbar-left {
-    gap: 0.3rem;
+  .navbar-logo img {
+    height: 30px;
   }
 
-  .navbar-right {
-    gap: 0.5rem;
+  .home-link {
+    font-size: 0.9rem;
   }
 
-  .logo img {
-    height: 20px;
-    width: 20px;
+  .navbar-links {
+    position: static;
+    transform: none;
+    gap: 1rem;
+    flex: 1;
+    justify-content: center;
+    margin: 0 1rem;
   }
 
-  .navbar-line-left {
-    width: 80px;
+  .nav-link {
+    font-size: 0.65rem;
   }
 
-  .navbar-line-right {
-    width: 40px;
-  }
-
-  .nav-icon {
-    padding: 8px;
-  }
-
-  .nav-icon img {
-    height: 16px;
-    width: 16px;
-  }
-
-  .copyright {
+  .navbar-copyright span {
     font-size: 0.75rem;
   }
 }
