@@ -7,11 +7,11 @@ const Skills = () => {
   return (
     <div
       style={{
-        background: "#060010",
+        background: "#171717",
         minHeight: "100vh",
-        padding: "0 6rem",
+        padding: "0 12rem",
         paddingTop: "12rem",
-        paddingBottom: "4rem",
+        paddingBottom: "10rem",
       }}
     >
       <Navbar showHome={true} />
@@ -21,9 +21,9 @@ const Skills = () => {
           style={{
             fontSize: "4rem",
             fontWeight: "700",
-            color: "#fff",
+            color: "#fefefe",
             fontFamily: "Montserrat, sans-serif",
-            marginBottom: "6rem",
+            marginBottom: "4rem",
           }}
         >
           SKILLS
@@ -34,7 +34,7 @@ const Skills = () => {
             style={{
               fontSize: "1.5rem",
               fontWeight: "600",
-              color: "#fff",
+              color: "#fefefe",
               fontFamily: "Montserrat, sans-serif",
               marginBottom: "1.5rem",
             }}
@@ -58,7 +58,7 @@ const Skills = () => {
             style={{
               fontSize: "1.5rem",
               fontWeight: "600",
-              color: "#fff",
+              color: "#fefefe",
               fontFamily: "Montserrat, sans-serif",
               marginBottom: "1.5rem",
             }}
@@ -82,7 +82,7 @@ const Skills = () => {
             style={{
               fontSize: "1.5rem",
               fontWeight: "600",
-              color: "#fff",
+              color: "#fefefe",
               fontFamily: "Montserrat, sans-serif",
               marginBottom: "1.5rem",
             }}
@@ -106,7 +106,7 @@ const Skills = () => {
             style={{
               fontSize: "1.5rem",
               fontWeight: "600",
-              color: "#fff",
+              color: "#fefefe",
               fontFamily: "Montserrat, sans-serif",
               marginBottom: "1.5rem",
             }}
@@ -130,7 +130,7 @@ const Skills = () => {
             style={{
               fontSize: "1.5rem",
               fontWeight: "600",
-              color: "#fff",
+              color: "#fefefe",
               fontFamily: "Montserrat, sans-serif",
               marginBottom: "1.5rem",
             }}
@@ -154,7 +154,7 @@ const Skills = () => {
             style={{
               fontSize: "1.5rem",
               fontWeight: "600",
-              color: "#fff",
+              color: "#fefefe",
               fontFamily: "Montserrat, sans-serif",
               marginBottom: "1.5rem",
             }}
