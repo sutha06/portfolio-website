@@ -9,7 +9,7 @@ const Contact = () => {
       style={{
         width: "100%",
         minHeight: "100vh",
-        background: "#060010",
+        background: "#171717",
         position: "relative",
       }}
     >
@@ -32,7 +32,7 @@ const Contact = () => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            color: "#fff",
+            color: "#fefefe",
             paddingLeft: "2rem",
           }}
         >
@@ -45,6 +45,7 @@ const Contact = () => {
               fontFamily: "Montserrat, sans-serif",
               letterSpacing: "-0.02em",
               marginTop: "-3rem",
+              color: "#fefefe",
             }}
           >
             THANK
@@ -61,6 +62,7 @@ const Contact = () => {
               lineHeight: "1.7",
               maxWidth: "550px",
               marginTop: "0",
+              color: "#fefefe",
             }}
           >
             FOR TAKING THE TIME TO LEARN MORE ABOUT ME,
@@ -76,6 +78,7 @@ const Contact = () => {
                 fontSize: "1.05rem",
                 fontFamily: "Montserrat, sans-serif",
                 fontWeight: "400",
+                color: "#b5b5b5",
               }}
             >
               EMAIL:{" "}
@@ -86,8 +89,15 @@ const Contact = () => {
                 fontSize: "1.05rem",
                 fontFamily: "Montserrat, sans-serif",
                 fontWeight: "400",
-                color: "#fff",
+                color: "#fefefe",
                 textDecoration: "underline",
+                transition: "color 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.color = "#b5b5b5";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.color = "#fefefe";
               }}
             >
               SUTHAKARAN.SIVA0601@GMAIL.COM
@@ -142,7 +152,7 @@ const FlipLink = ({ children, href }) => {
         textTransform: "uppercase",
         fontFamily: "Montserrat, sans-serif",
         lineHeight: "1",
-        color: "#fff",
+        color: "#fefefe",
         textDecoration: "none",
         textAlign: "right",
       }}
