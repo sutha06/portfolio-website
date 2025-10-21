@@ -53,7 +53,7 @@ const Projects = () => {
       style={{
         width: "100%",
         minHeight: "100vh",
-        background: "#060010",
+        background: "#171717",
       }}
     >
       <Navbar showHome={true} />
@@ -63,7 +63,7 @@ const Projects = () => {
           maxWidth: "1280px",
           margin: "0 auto",
           padding: "12rem 4rem 4rem 4rem",
-          color: "#fff",
+          color: "#fefefe",
           minHeight: "200vh",
         }}
       >
@@ -75,9 +75,10 @@ const Projects = () => {
             marginBottom: "5rem",
             fontFamily: "Montserrat, sans-serif",
             letterSpacing: "0.05em",
+            color: "#fefefe",
           }}
         >
-          Launch Schedule
+          My Projects
         </h1>
 
         {projects.map((project, index) => (
@@ -88,7 +89,7 @@ const Projects = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              borderBottom: "1px solid rgba(161, 161, 170, 0.3)",
+              borderBottom: "1px solid rgba(181, 181, 181, 0.3)",
               padding: "0.75rem",
               paddingBottom: "2.25rem",
               cursor: "pointer",
@@ -97,12 +98,12 @@ const Projects = () => {
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateX(10px)";
               e.currentTarget.style.borderBottomColor =
-                "rgba(255, 255, 255, 0.4)";
+                "rgba(254, 254, 254, 0.4)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateX(0)";
               e.currentTarget.style.borderBottomColor =
-                "rgba(161, 161, 170, 0.3)";
+                "rgba(181, 181, 181, 0.3)";
             }}
           >
             <div>
@@ -112,7 +113,7 @@ const Projects = () => {
                   marginBottom: "0.375rem",
                   fontFamily: "Montserrat, sans-serif",
                   fontWeight: "400",
-                  color: "#fafafa",
+                  color: "#fefefe",
                 }}
               >
                 {project.title}
@@ -121,7 +122,7 @@ const Projects = () => {
                 style={{
                   fontSize: "0.875rem",
                   textTransform: "uppercase",
-                  color: "rgba(161, 161, 170, 1)",
+                  color: "#b5b5b5",
                   fontFamily: "Montserrat, sans-serif",
                 }}
               >
@@ -139,18 +140,18 @@ const Projects = () => {
                 textAlign: "right",
                 fontSize: "0.875rem",
                 textTransform: "uppercase",
-                color: "rgba(161, 161, 170, 1)",
+                color: "#b5b5b5",
                 textDecoration: "none",
                 fontFamily: "Montserrat, sans-serif",
                 transition: "all 0.3s ease",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.color = "#fff";
+                e.currentTarget.style.color = "#fefefe";
                 e.currentTarget.querySelector(".arrow").style.transform =
                   "translateX(6px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.color = "rgba(161, 161, 170, 1)";
+                e.currentTarget.style.color = "#b5b5b5";
                 e.currentTarget.querySelector(".arrow").style.transform =
                   "translateX(0)";
               }}
