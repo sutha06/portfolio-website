@@ -10,12 +10,12 @@ const ScrollReveal = ({
   scrollContainerRef,
   enableBlur = true,
   baseOpacity = 0.1,
-  baseRotation = 3,
+  baseRotation = 0,
   blurStrength = 4,
   containerClassName = "",
   textClassName = "",
-  rotationEnd = "bottom bottom",
-  wordAnimationEnd = "bottom bottom",
+  rotationEnd = "center center",
+  wordAnimationEnd = "center center",
 }) => {
   const containerRef = useRef(null);
 
@@ -40,36 +40,49 @@ const ScrollReveal = ({
         ? scrollContainerRef.current
         : window;
 
+    // Fade up animation for the container
     gsap.fromTo(
       el,
-      { transformOrigin: "0% 50%", rotate: baseRotation },
+      {
+        transformOrigin: "0% 50%",
+        rotate: baseRotation,
+        y: 50,
+      },
       {
         ease: "none",
         rotate: 0,
+        y: 0,
         scrollTrigger: {
           trigger: el,
           scroller,
           start: "top bottom",
           end: rotationEnd,
-          scrub: true,
+          scrub: 3,
         },
       }
     );
 
     const wordElements = el.querySelectorAll(".word");
+
+    // Fade in words from bottom
     gsap.fromTo(
       wordElements,
-      { opacity: baseOpacity, willChange: "opacity" },
+      {
+        opacity: baseOpacity,
+        willChange: "opacity",
+        y: 20,
+      },
       {
         ease: "none",
         opacity: 1,
+        y: 0,
         stagger: 0.05,
         scrollTrigger: {
           trigger: el,
           scroller,
-          start: "top bottom-=20%",
+          start: "top bottom",
           end: wordAnimationEnd,
-          scrub: true,
+          scrub: 3,
         },
       }
     );
@@ -85,9 +98,9 @@ const ScrollReveal = ({
           scrollTrigger: {
             trigger: el,
             scroller,
-            start: "top bottom-=20%",
+            start: "top bottom",
             end: wordAnimationEnd,
-            scrub: true,
+            scrub: 3,
           },
         }
       );
