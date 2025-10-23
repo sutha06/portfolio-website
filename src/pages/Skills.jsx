@@ -300,10 +300,31 @@ const Skills = () => {
             maxWidth: "1400px",
             margin: "0 auto",
             paddingTop: "4rem",
-            paddingBottom: "50vh",
+            paddingBottom: "30vh",
             position: "relative",
           }}
         >
+          {/* Hint Message */}
+          <div
+            style={{
+              textAlign: "center",
+              marginBottom: "4rem",
+              opacity: 0.7,
+            }}
+          >
+            <p
+              style={{
+                fontSize: "1rem",
+                color: "#b5b5b5",
+                fontFamily: "Montserrat, sans-serif",
+                letterSpacing: "0.1em",
+                fontStyle: "italic",
+              }}
+            >
+              💡 Hover over any skill to see it in action
+            </p>
+          </div>
+
           {/* Hover Image Display - Fixed on Right */}
           {hoveredSkill && (
             <div
@@ -391,10 +412,12 @@ const Skills = () => {
                       <span
                         onMouseEnter={() => setHoveredSkill(skill)}
                         onMouseLeave={() => setHoveredSkill(null)}
+                        className="skill-item"
                         style={{
                           cursor: "pointer",
-                          transition: "color 0.3s ease",
+                          transition: "all 0.3s ease",
                           display: "inline-block",
+                          color: "#cccccc",
                         }}
                       >
                         <ScrollReveal
@@ -433,6 +456,12 @@ const Skills = () => {
             opacity: 1;
             transform: translateY(-50%) scale(1);
           }
+        }
+        
+        .skill-item:hover {
+          color: #fefefe !important;
+          text-shadow: 0 0 20px rgba(254, 254, 254, 0.5);
+          transform: translateX(10px);
         }
       `}</style>
     </div>
