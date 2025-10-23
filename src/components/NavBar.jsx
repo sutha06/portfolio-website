@@ -19,7 +19,7 @@ function Navbar({ showLinks = true, showHome = false }) {
       {showLinks && !showHome && (
         <div className="navbar-links">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/sutha06"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-link"
@@ -27,7 +27,7 @@ function Navbar({ showLinks = true, showHome = false }) {
             GITHUB
           </a>
           <a
-            href="https://tryhackme.com/p/yourusername"
+            href="https://tryhackme.com/p/Sutha"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-link"
@@ -35,7 +35,7 @@ function Navbar({ showLinks = true, showHome = false }) {
             TRYHACKME
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/suthasiv/"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-link"

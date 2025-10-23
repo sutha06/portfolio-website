@@ -19,7 +19,7 @@ const Contact = () => {
         style={{
           display: "grid",
           gridTemplateColumns: "50% 50%",
-          padding: "0 4rem",
+          padding: "0 6rem",
           gap: "2rem",
           maxWidth: "100%",
           height: "100vh",
@@ -38,10 +38,10 @@ const Contact = () => {
         >
           <h1
             style={{
-              fontSize: "7.5rem",
+              fontSize: "10rem",
               fontWeight: "700",
-              lineHeight: "1.5",
-              marginBottom: "3rem",
+              lineHeight: "1.2",
+              marginBottom: "4rem",
               fontFamily: "Montserrat, sans-serif",
               letterSpacing: "-0.02em",
               marginTop: "-3rem",
@@ -55,12 +55,12 @@ const Contact = () => {
 
           <p
             style={{
-              fontSize: "1.05rem",
-              marginBottom: "2.5rem",
+              fontSize: "1.3rem",
+              marginBottom: "3rem",
               fontFamily: "Montserrat, sans-serif",
               fontWeight: "400",
-              lineHeight: "1.7",
-              maxWidth: "550px",
+              lineHeight: "1.8",
+              maxWidth: "650px",
               marginTop: "0",
               color: "#fefefe",
             }}
@@ -72,36 +72,72 @@ const Contact = () => {
             LINKS PROVIDED
           </p>
 
-          <div>
-            <span
-              style={{
-                fontSize: "1.05rem",
-                fontFamily: "Montserrat, sans-serif",
-                fontWeight: "400",
-                color: "#b5b5b5",
-              }}
-            >
-              EMAIL:{" "}
-            </span>
-            <a
-              href="mailto:SUTHAKARAN.SIVA0601@GMAIL.COM"
-              style={{
-                fontSize: "1.05rem",
-                fontFamily: "Montserrat, sans-serif",
-                fontWeight: "400",
-                color: "#fefefe",
-                textDecoration: "underline",
-                transition: "color 0.3s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.color = "#b5b5b5";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.color = "#fefefe";
-              }}
-            >
-              SUTHAKARAN.SIVA0601@GMAIL.COM
-            </a>
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}
+          >
+            <div>
+              <span
+                style={{
+                  fontSize: "1.3rem",
+                  fontFamily: "Montserrat, sans-serif",
+                  fontWeight: "400",
+                  color: "#b5b5b5",
+                }}
+              >
+                EMAIL:{" "}
+              </span>
+              <a
+                href="mailto:SUTHAKARAN.SIVA0601@GMAIL.COM"
+                style={{
+                  fontSize: "1.3rem",
+                  fontFamily: "Montserrat, sans-serif",
+                  fontWeight: "400",
+                  color: "#fefefe",
+                  textDecoration: "underline",
+                  transition: "color 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.color = "#b5b5b5";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.color = "#fefefe";
+                }}
+              >
+                SUTHAKARAN.SIVA0601@GMAIL.COM
+              </a>
+            </div>
+
+            <div>
+              <span
+                style={{
+                  fontSize: "1.3rem",
+                  fontFamily: "Montserrat, sans-serif",
+                  fontWeight: "400",
+                  color: "#b5b5b5",
+                }}
+              >
+                PHONE:{" "}
+              </span>
+              <a
+                href="tel:+14167107465"
+                style={{
+                  fontSize: "1.3rem",
+                  fontFamily: "Montserrat, sans-serif",
+                  fontWeight: "400",
+                  color: "#fefefe",
+                  textDecoration: "underline",
+                  transition: "color 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.color = "#b5b5b5";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.color = "#fefefe";
+                }}
+              >
+                416-710-7465
+              </a>
+            </div>
           </div>
         </div>
 
@@ -112,18 +148,18 @@ const Contact = () => {
             flexDirection: "column",
             justifyContent: "flex-end",
             alignItems: "flex-end",
-            gap: "1rem",
-            paddingRight: "4rem",
-            paddingBottom: "4rem",
+            gap: "2rem",
+            paddingRight: "6rem",
+            paddingBottom: "6rem",
             height: "100%",
           }}
         >
-          <FlipLink href="https://github.com/yourusername">GITHUB</FlipLink>
-          <FlipLink href="https://linkedin.com/in/yourusername">
+          <FlipLink href="https://github.com/sutha06">GITHUB</FlipLink>
+          <FlipLink href="https://www.linkedin.com/in/suthasiv/">
             LINKEDIN
           </FlipLink>
-          <FlipLink href="https://www.hackerrank.com/yourusername">
-            HACKERRANK
+          <FlipLink href="https://tryhackme.com/p/Sutha">
+            TRYHACKME
           </FlipLink>
         </div>
       </div>
@@ -147,7 +183,7 @@ const FlipLink = ({ children, href }) => {
         display: "block",
         overflow: "hidden",
         whiteSpace: "nowrap",
-        fontSize: "5.5rem",
+        fontSize: "7rem",
         fontWeight: "700",
         textTransform: "uppercase",
         fontFamily: "Montserrat, sans-serif",
