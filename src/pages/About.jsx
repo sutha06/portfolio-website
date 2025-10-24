@@ -35,7 +35,7 @@ const About = () => {
       <div
         style={{
           marginLeft: "50%",
-          padding: "4rem",
+          padding: "6rem 5rem",
           color: "#fefefe",
           position: "relative",
           zIndex: 2,
@@ -52,11 +52,12 @@ const About = () => {
         >
           <p
             style={{
-              fontSize: "0.9rem",
+              fontSize: "1.1rem",
               letterSpacing: "0.2em",
-              marginBottom: "2rem",
+              marginBottom: "3rem",
               textAlign: "right",
               color: "#b5b5b5",
+              fontFamily: "Montserrat, sans-serif",
             }}
           >
             ABOUT ME
@@ -64,22 +65,25 @@ const About = () => {
 
           <h1
             style={{
-              fontSize: "3.5rem",
+              fontSize: "5rem",
               fontFamily: "Montserrat, sans-serif",
               fontWeight: "600",
-              marginBottom: "2rem",
+              marginBottom: "3rem",
               color: "#fefefe",
+              lineHeight: "1.2",
             }}
           >
-            Suthakaran Siva
+            SUTHAKARAN
+            <br />
+            SIVA
           </h1>
 
           <p
             style={{
-              fontSize: "1.1rem",
+              fontSize: "1.3rem",
               lineHeight: "1.8",
               fontFamily: "Montserrat, sans-serif",
-              marginBottom: "2rem",
+              marginBottom: "3rem",
               color: "#fefefe",
             }}
           >
@@ -139,11 +143,12 @@ const CertificationsCarousel = () => {
     <div style={{ marginTop: "4rem", paddingBottom: "4rem" }}>
       <h2
         style={{
-          fontSize: "2rem",
+          fontSize: "2.5rem",
           fontWeight: "500",
           marginBottom: "3rem",
           textAlign: "left",
           color: "#fefefe",
+          fontFamily: "Montserrat, sans-serif",
         }}
       >
         CERTIFICATIONS
@@ -264,11 +269,12 @@ const CertificationCard = ({
       />
       <h4
         style={{
-          fontSize: "1.3rem",
+          fontSize: "1.5rem",
           fontWeight: "500",
           textAlign: "center",
           margin: 0,
           color: "#fefefe",
+          fontFamily: "Montserrat, sans-serif",
         }}
       >
         {title}
@@ -285,8 +291,9 @@ const CertificationCard = ({
           style={{
             padding: "0.5rem 1rem",
             borderRadius: "20px",
-            fontSize: "0.9rem",
+            fontSize: "1rem",
             fontWeight: "500",
+            fontFamily: "Montserrat, sans-serif",
             background:
               status === "Completed"
                 ? "rgba(34, 197, 94, 0.2)"
@@ -296,7 +303,15 @@ const CertificationCard = ({
         >
           {status}
         </span>
-        <span style={{ fontSize: "0.9rem", color: "#b5b5b5" }}>{date}</span>
+        <span
+          style={{
+            fontSize: "1rem",
+            color: "#b5b5b5",
+            fontFamily: "Montserrat, sans-serif",
+          }}
+        >
+          {date}
+        </span>
       </div>
     </motion.div>
   );

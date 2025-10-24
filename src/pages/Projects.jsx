@@ -60,19 +60,19 @@ const Projects = () => {
 
       <section
         style={{
-          maxWidth: "1280px",
+          maxWidth: "1600px",
           margin: "0 auto",
-          padding: "12rem 4rem 4rem 4rem",
+          padding: "14rem 6rem 6rem 6rem",
           color: "#fefefe",
           minHeight: "200vh",
         }}
       >
         <h1
           style={{
-            fontSize: "2.5rem",
+            fontSize: "4rem",
             fontWeight: "900",
             textTransform: "uppercase",
-            marginBottom: "5rem",
+            marginBottom: "6rem",
             fontFamily: "Montserrat, sans-serif",
             letterSpacing: "0.05em",
             color: "#fefefe",
@@ -85,13 +85,13 @@ const Projects = () => {
           <div
             key={index}
             style={{
-              marginBottom: "2.25rem",
+              marginBottom: "3rem",
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
               borderBottom: "1px solid rgba(181, 181, 181, 0.3)",
-              padding: "0.75rem",
-              paddingBottom: "2.25rem",
+              padding: "1.5rem",
+              paddingBottom: "3rem",
               cursor: "pointer",
               transition: "all 0.3s ease",
             }}
@@ -109,8 +109,8 @@ const Projects = () => {
             <div>
               <p
                 style={{
-                  fontSize: "1.25rem",
-                  marginBottom: "0.375rem",
+                  fontSize: "2rem",
+                  marginBottom: "0.75rem",
                   fontFamily: "Montserrat, sans-serif",
                   fontWeight: "400",
                   color: "#fefefe",
@@ -120,7 +120,7 @@ const Projects = () => {
               </p>
               <p
                 style={{
-                  fontSize: "0.875rem",
+                  fontSize: "1.2rem",
                   textTransform: "uppercase",
                   color: "#b5b5b5",
                   fontFamily: "Montserrat, sans-serif",
@@ -136,9 +136,9 @@ const Projects = () => {
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "0.375rem",
+                gap: "0.75rem",
                 textAlign: "right",
-                fontSize: "0.875rem",
+                fontSize: "1.2rem",
                 textTransform: "uppercase",
                 color: "#b5b5b5",
                 textDecoration: "none",
