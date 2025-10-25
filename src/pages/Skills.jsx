@@ -48,134 +48,123 @@ const Skills = () => {
       category: "System Administration",
       name: "Active Directory",
       image: "/images/skills/active-directory.png",
+      tools: ["windows", "microsoft"],
     },
     {
       category: "System Administration",
-      name: "Group Policy Management",
+      name: "User management and directory services",
       image: "/images/skills/group-policy.png",
+      tools: ["windows", "azure"],
     },
     {
       category: "System Administration",
-      name: "DNS & DHCP Configuration",
+      name: "Server and cloud resource management",
       image: "/images/skills/dns.png",
-    },
-    {
-      category: "System Administration",
-      name: "Windows Server Administration",
-      image: "/images/skills/windows-server.png",
+      tools: ["azure", "aws"],
     },
     {
       category: "System Administration",
       name: "User Permission Management",
       image: "/images/skills/permissions.png",
+      tools: ["windows"],
+    },
+    {
+      category: "System Administration",
+      name: "Disaster recovery planning",
+      image: "/images/skills/windows.png",
+      tools: ["windows", "veeam"],
     },
 
     // Cloud & Virtualization
     {
       category: "Cloud & Virtualization",
-      name: "Microsoft Azure",
+      name: "Hosting a simple website on a cloud platform",
       image: "/images/skills/azure.png",
+      tools: ["azure", "aws"],
     },
     {
       category: "Cloud & Virtualization",
-      name: "Azure Active Directory",
+      name: "Demonstrating virtualization concepts",
       image: "/images/skills/azure-ad.png",
+      tools: ["vmware", "hyperv"],
     },
     {
       category: "Cloud & Virtualization",
-      name: "AWS",
+      name: "Cloud storage implementation for data backup",
       image: "/images/skills/aws.png",
-    },
-    {
-      category: "Cloud & Virtualization",
-      name: "VMware",
-      image: "/images/skills/vmware.png",
-    },
-    {
-      category: "Cloud & Virtualization",
-      name: "Hyper-V",
-      image: "/images/skills/hyperv.png",
+      tools: ["azure", "aws"],
     },
 
     // Automation & Scripting
     {
       category: "Automation & Scripting",
-      name: "PowerShell",
+      name: "Create batch/shell scripts",
       image: "/images/skills/powershell.png",
+      tools: ["powershell", "bash"],
     },
     {
       category: "Automation & Scripting",
-      name: "Python",
+      name: "Scheduled tasks",
       image: "/images/skills/python.png",
+      tools: ["windows", "linux"],
     },
     {
       category: "Automation & Scripting",
-      name: "Bash",
+      name: "System health check script",
       image: "/images/skills/bash.png",
-    },
-    {
-      category: "Automation & Scripting",
-      name: "Task Scheduling",
-      image: "/images/skills/automation.png",
-    },
-    {
-      category: "Automation & Scripting",
-      name: "Workflow Automation",
-      image: "/images/skills/workflow.png",
+      tools: ["python", "bash"],
     },
 
     // Networking & Security
     {
       category: "Networking & Security",
-      name: "Cisco Networking",
+      name: "Network topology diagram for a small business",
       image: "/images/skills/cisco.png",
+      tools: ["cisco", "visio"],
     },
     {
       category: "Networking & Security",
-      name: "VPN Configuration",
+      name: "Network communication walkthrough",
       image: "/images/skills/vpn.png",
+      tools: ["wireshark", "cisco"],
     },
     {
       category: "Networking & Security",
-      name: "Firewall Management",
+      name: "security case study",
       image: "/images/skills/firewall.png",
+      tools: ["pfsense", "cisco"],
     },
     {
       category: "Networking & Security",
-      name: "Network Troubleshooting",
+      name: "Wireless network security configuration",
       image: "/images/skills/troubleshoot.png",
-    },
-    {
-      category: "Networking & Security",
-      name: "Security Protocols",
-      image: "/images/skills/security.png",
+      tools: ["cisco", "ubiquiti"],
     },
 
     // Monitoring & Management Tools
     {
       category: "Monitoring & Management Tools",
-      name: "SCCM",
+      name: "Log file analysis",
       image: "/images/skills/sccm.png",
+      tools: ["splunk", "elk"],
     },
     {
       category: "Monitoring & Management Tools",
-      name: "Nagios",
+      name: "Remote system management",
       image: "/images/skills/nagios.png",
+      tools: ["ssh", "rdp"],
     },
     {
       category: "Monitoring & Management Tools",
-      name: "System Monitoring",
+      name: "Software installation and configuration",
       image: "/images/skills/monitoring.png",
+      tools: ["sccm", "chocolatey"],
     },
     {
       category: "Monitoring & Management Tools",
-      name: "Performance Analysis",
+      name: "Help desk ticket management",
       image: "/images/skills/performance.png",
-    },
-    {
-      category: "Monitoring & Management Tools",
-      name: "Incident Response",
-      image: "/images/skills/incident.png",
+      tools: ["servicenow", "jira"],
     },
 
     // Help Desk & Support
@@ -183,28 +172,66 @@ const Skills = () => {
       category: "Help Desk & Support",
       name: "Technical Troubleshooting",
       image: "/images/skills/troubleshoot.png",
+      tools: ["windows", "linux"],
     },
     {
       category: "Help Desk & Support",
-      name: "User Support",
+      name: "Help desk ticket resolution walkthrough",
       image: "/images/skills/support.png",
+      tools: ["servicenow", "zendesk"],
     },
     {
       category: "Help Desk & Support",
       name: "Ticketing Systems",
       image: "/images/skills/ticketing.png",
+      tools: ["jira", "servicenow"],
     },
     {
       category: "Help Desk & Support",
       name: "Technical Documentation",
       image: "/images/skills/documentation.png",
+      tools: ["confluence", "notion"],
     },
     {
       category: "Help Desk & Support",
-      name: "End-User Training",
+      name: "AI for troubleshooting",
       image: "/images/skills/training.png",
+      tools: ["chatgpt", "copilot"],
     },
   ];
+
+  // Tool icon mapping
+  const toolIcons = {
+    windows: "/images/tools/windows.png",
+    microsoft: "/images/tools/microsoft.png",
+    azure: "/images/tools/azure.png",
+    aws: "/images/tools/aws.png",
+    vmware: "/images/tools/vmware.png",
+    hyperv: "/images/tools/hyperv.png",
+    powershell: "/images/tools/powershell.png",
+    bash: "/images/tools/bash.png",
+    python: "/images/tools/python.png",
+    linux: "/images/tools/linux.png",
+    cisco: "/images/tools/cisco.png",
+    visio: "/images/tools/visio.png",
+    wireshark: "/images/tools/wireshark.png",
+    pfsense: "/images/tools/pfsense.png",
+    ubiquiti: "/images/tools/ubiquiti.png",
+    splunk: "/images/tools/splunk.png",
+    elk: "/images/tools/elk.png",
+    ssh: "/images/tools/ssh.png",
+    rdp: "/images/tools/rdp.png",
+    sccm: "/images/tools/sccm.png",
+    chocolatey: "/images/tools/chocolatey.png",
+    servicenow: "/images/tools/servicenow.png",
+    jira: "/images/tools/jira.png",
+    zendesk: "/images/tools/zendesk.png",
+    confluence: "/images/tools/confluence.png",
+    notion: "/images/tools/notion.png",
+    chatgpt: "/images/tools/chatgpt.png",
+    copilot: "/images/tools/copilot.png",
+    veeam: "/images/tools/veeam.png",
+  };
 
   const categories = [...new Set(skillsData.map((skill) => skill.category))];
 
@@ -300,7 +327,7 @@ const Skills = () => {
             maxWidth: "1400px",
             margin: "0 auto",
             paddingTop: "4rem",
-            paddingBottom: "30vh",
+            paddingBottom: "15vh",
             position: "relative",
           }}
         >
@@ -384,6 +411,50 @@ const Skills = () => {
                   padding: "5rem 2rem 2rem 2rem",
                 }}
               />
+
+              {/* Tool Icons - Bottom Right */}
+              {hoveredSkill.tools && hoveredSkill.tools.length > 0 && (
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "2rem",
+                    right: "2rem",
+                    display: "flex",
+                    gap: "0.75rem",
+                    alignItems: "center",
+                    background: "rgba(23, 23, 23, 0.8)",
+                    backdropFilter: "blur(10px)",
+                    padding: "1rem 1.5rem",
+                    borderRadius: "20px",
+                    border: "1px solid rgba(254, 254, 254, 0.1)",
+                    zIndex: 10,
+                  }}
+                >
+                  {hoveredSkill.tools.map((tool, toolIndex) => (
+                    <img
+                      key={toolIndex}
+                      src={toolIcons[tool]}
+                      alt={tool}
+                      title={tool}
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        objectFit: "contain",
+                        opacity: 0.9,
+                        transition: "all 0.3s ease",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.opacity = "1";
+                        e.target.style.transform = "scale(1.15)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.opacity = "0.9";
+                        e.target.style.transform = "scale(1)";
+                      }}
+                    />
+                  ))}
+                </div>
+              )}
             </div>
           )}
 
@@ -403,7 +474,7 @@ const Skills = () => {
               </h3>
 
               <div
-                style={{ fontSize: "2rem", lineHeight: "2", color: "#fefefe" }}
+                style={{ fontSize: "2rem", lineHeight: "2", color: "#b5b5b5" }}
               >
                 {skillsData
                   .filter((skill) => skill.category === category)
@@ -417,7 +488,7 @@ const Skills = () => {
                           cursor: "pointer",
                           transition: "all 0.3s ease",
                           display: "inline-block",
-                          color: "#cccccc",
+                          color: "#b5b5b5",
                         }}
                       >
                         <ScrollReveal
@@ -460,7 +531,7 @@ const Skills = () => {
         
         .skill-item:hover {
           color: #fefefe !important;
-          text-shadow: 0 0 20px rgba(254, 254, 254, 0.5);
+          text-shadow: 0 0 8px rgba(254, 254, 254, 0.2);
           transform: translateX(10px);
         }
       `}</style>
