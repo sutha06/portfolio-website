@@ -6,45 +6,38 @@ const Projects = () => {
   const projects = [
     {
       title: "Portfolio Website",
-      description: "Personal portfolio built with React and Framer Motion",
-      tech: "React, Framer Motion, Tailwind CSS",
-      link: "https://github.com/yourusername/portfolio",
+      description:
+        "Modern, animated portfolio website showcasing my skills and experience",
+      link: "#",
     },
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce application with payment integration",
-      tech: "Node.js, MongoDB, Stripe API",
-      link: "https://github.com/yourusername/ecommerce",
+      title: "NFC Business Card",
+      description:
+        "A digital business card accessed via NFC I built from scratch",
+      link: "#",
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management tool with real-time updates",
-      tech: "React, Firebase, Material-UI",
-      link: "https://github.com/yourusername/taskapp",
+      title: "Legal Lens",
+      description:
+        "Hackathon winner: AI-powered legal document analyzer that simplifies complex legal text",
+      link: "#",
     },
     {
-      title: "Weather Dashboard",
-      description: "Weather forecasting app with interactive maps",
-      tech: "React, OpenWeather API, Chart.js",
-      link: "https://github.com/yourusername/weather",
+      title: "FoodFinder App",
+      description: "Mobile app to help users to discover nearby restaurants",
+      link: "#",
     },
     {
-      title: "Social Media Clone",
-      description: "Instagram-like social platform with real-time features",
-      tech: "React Native, GraphQL, PostgreSQL",
-      link: "https://github.com/yourusername/social",
+      title: "PicPick",
+      description:
+        "Hackathon project: visual shopping interface for multiple online commerce platforms",
+      link: "#",
     },
     {
-      title: "Fitness Tracker",
-      description: "Track workouts and nutrition with data visualization",
-      tech: "Vue.js, D3.js, Express",
-      link: "https://github.com/yourusername/fitness",
-    },
-    {
-      title: "AI Chatbot",
-      description: "Customer service bot with natural language processing",
-      tech: "Python, TensorFlow, Flask",
-      link: "https://github.com/yourusername/chatbot",
+      title: "WiFi Analyzer",
+      description:
+        "Arduino-based WiFi network analyzer for signal strength monitoring and network diagnostics",
+      link: "#",
     },
   ];
 
@@ -120,13 +113,13 @@ const Projects = () => {
               </p>
               <p
                 style={{
-                  fontSize: "1.2rem",
-                  textTransform: "uppercase",
+                  fontSize: "1rem",
                   color: "#b5b5b5",
                   fontFamily: "Montserrat, sans-serif",
+                  fontWeight: "300",
                 }}
               >
-                {project.tech}
+                {project.description}
               </p>
             </div>
             <a

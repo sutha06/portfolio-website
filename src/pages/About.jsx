@@ -120,8 +120,8 @@ const CertificationsCarousel = () => {
       date: "September 2025",
     },
     {
-      title: "CompTIA Network+ Certificate",
-      image: "/images/network.png",
+      title: "CompTIA Security+ Certificate",
+      image: "/images/security.png",
       status: "In Progress",
       date: "Expected November 2025",
     },
@@ -130,6 +130,12 @@ const CertificationsCarousel = () => {
       image: "/images/redhat.png",
       status: "In Progress",
       date: "Expected December 2025",
+    },
+    {
+      title: "CompTIA Network+ Certificate",
+      image: "/images/network.png",
+      status: "In Progress",
+      date: "Expected January 2026",
     },
     {
       title: "Microsoft Azure Administrator Certificate",

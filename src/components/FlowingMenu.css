@@ -10,18 +10,18 @@
 .menu {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* add this line */
+  justify-content: center;
   height: 100%;
   width: 100%;
   margin: 0;
-  padding: 0; /* remove padding, let justify-content handle it */
+  padding: 0;
   list-style: none;
   gap: 0;
 }
 
 .menu__item {
-  flex: 0 0 auto; /* don't grow */
-  height: 14vh; /* fixed smaller height */
+  flex: 0 0 auto;
+  height: 14vh;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -42,10 +42,10 @@
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  font-weight: 500; /* already correct */
+  font-weight: 500;
   color: #fff;
-  font-size: 5vh;
-  font-family: "Montserrat", sans-serif; /* add this line */
+  font-size: clamp(2.5rem, 5vh, 6rem);
+  font-family: "Montserrat", sans-serif;
 }
 
 .menu__item-link:hover {
@@ -89,11 +89,11 @@
   color: #060010;
   white-space: nowrap;
   text-transform: uppercase;
-  font-weight: 500; /* changed from 400 to 500 */
-  font-size: 5vh;
+  font-weight: 500;
+  font-size: clamp(2.5rem, 5vh, 6rem);
   line-height: 1.2;
   padding: 1vh 1vw 0;
-  font-family: "Montserrat", sans-serif; /* add this line */
+  font-family: "Montserrat", sans-serif;
 }
 
 .marquee__img {
@@ -112,5 +112,90 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+/* Responsive breakpoints */
+
+/* Small laptops and tablets (1024px - 1366px) */
+@media screen and (max-width: 1366px) {
+  .menu__item {
+    height: 15vh;
+  }
+
+  .menu__item-link {
+    font-size: clamp(2rem, 4.5vh, 5rem);
+  }
+
+  .marquee span {
+    font-size: clamp(2rem, 4.5vh, 5rem);
+  }
+
+  .marquee__img {
+    width: 150px;
+    height: 6vh;
+  }
+}
+
+/* Tablets and smaller laptops (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .menu__item {
+    height: 16vh;
+  }
+
+  .menu__item-link {
+    font-size: clamp(1.8rem, 4vh, 4.5rem);
+  }
+
+  .marquee span {
+    font-size: clamp(1.8rem, 4vh, 4.5rem);
+  }
+
+  .marquee__img {
+    width: 120px;
+    height: 5vh;
+    margin: 1.5em 1.5vw;
+  }
+}
+
+/* iPad and smaller tablets (600px - 768px) */
+@media screen and (max-width: 768px) {
+  .menu__item {
+    height: 18vh;
+  }
+
+  .menu__item-link {
+    font-size: clamp(1.5rem, 3.5vh, 4rem);
+  }
+
+  .marquee span {
+    font-size: clamp(1.5rem, 3.5vh, 4rem);
+  }
+
+  .marquee__img {
+    width: 100px;
+    height: 4vh;
+  }
+}
+
+/* Mobile devices (under 600px) */
+@media screen and (max-width: 600px) {
+  .menu__item {
+    height: 20vh;
+  }
+
+  .menu__item-link {
+    font-size: clamp(1.2rem, 3vh, 3rem);
+    padding: 0 1rem;
+  }
+
+  .marquee span {
+    font-size: clamp(1.2rem, 3vh, 3rem);
+  }
+
+  .marquee__img {
+    width: 80px;
+    height: 3.5vh;
+    margin: 1em 1vw;
   }
 }
