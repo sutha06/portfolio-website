@@ -52,15 +52,17 @@ const Projects = () => {
       <Navbar showHome={true} />
 
       <section
+        className="projects-section"
         style={{
           maxWidth: "1600px",
           margin: "0 auto",
           padding: "14rem 6rem 6rem 6rem",
           color: "#fefefe",
-          minHeight: "200vh",
+          minHeight: "100vh",
         }}
       >
         <h1
+          className="projects-title"
           style={{
             fontSize: "4rem",
             fontWeight: "900",
@@ -76,6 +78,7 @@ const Projects = () => {
 
         {projects.map((project, index) => (
           <div
+            className="project-item"
             key={index}
             style={{
               marginBottom: "3rem",
@@ -83,7 +86,7 @@ const Projects = () => {
               alignItems: "center",
               justifyContent: "space-between",
               borderBottom: "1px solid rgba(181, 181, 181, 0.3)",
-              padding: "1.5rem",
+              padding: "1.5rem 0",
               paddingBottom: "3rem",
               cursor: "pointer",
               transition: "all 0.3s ease",
@@ -99,8 +102,9 @@ const Projects = () => {
                 "rgba(181, 181, 181, 0.3)";
             }}
           >
-            <div>
+            <div style={{ flex: 1, maxWidth: "70%" }}>
               <p
+                className="project-title"
                 style={{
                   fontSize: "2rem",
                   marginBottom: "0.75rem",
@@ -112,11 +116,13 @@ const Projects = () => {
                 {project.title}
               </p>
               <p
+                className="project-description"
                 style={{
                   fontSize: "1rem",
                   color: "#b5b5b5",
                   fontFamily: "Montserrat, sans-serif",
                   fontWeight: "300",
+                  lineHeight: "1.6",
                 }}
               >
                 {project.description}
@@ -126,17 +132,20 @@ const Projects = () => {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
+              className="project-link"
               style={{
                 display: "flex",
                 alignItems: "center",
                 gap: "0.75rem",
                 textAlign: "right",
-                fontSize: "1.2rem",
+                fontSize: "1rem",
                 textTransform: "uppercase",
                 color: "#b5b5b5",
                 textDecoration: "none",
                 fontFamily: "Montserrat, sans-serif",
                 transition: "all 0.3s ease",
+                whiteSpace: "nowrap",
+                marginLeft: "2rem",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.color = "#fefefe";
@@ -163,6 +172,99 @@ const Projects = () => {
           </div>
         ))}
       </section>
+
+      <style>{`
+  @media (min-width: 2560px) {
+          .projects-section {
+            padding: 16rem 8rem 8rem 8rem !important;
+          }
+          .projects-title {
+            font-size: 5rem !important;
+          }
+          .project-title {
+            font-size: 2.5rem !important;
+          }
+          .project-description {
+            font-size: 1.3rem !important;
+          }
+          .project-link {
+            font-size: 1.2rem !important;
+          }
+        }
+
+        @media (max-width: 1440px) {
+          .projects-section {
+            padding: 12rem 5rem 5rem 5rem !important;
+          }
+          .projects-title {
+            font-size: 3.8rem !important;
+          }
+          .project-title {
+            font-size: 1.9rem !important;
+          }
+          .project-description {
+            font-size: 0.98rem !important;
+          }
+        }
+
+        @media (max-width: 1366px) {
+          .projects-section {
+            padding: 11rem 4rem 4rem 4rem !important;
+          }
+          .projects-title {
+            font-size: 3.5rem !important;
+            margin-bottom: 4rem !important;
+          }
+          .project-title {
+            font-size: 1.8rem !important;
+          }
+          .project-description {
+            font-size: 0.95rem !important;
+          }
+          .project-link {
+            font-size: 0.95rem !important;
+          }
+        }
+
+        @media (max-width: 1280px) {
+          .projects-section {
+            padding: 10rem 3.5rem 4rem 3.5rem !important;
+          }
+          .projects-title {
+            font-size: 3.3rem !important;
+          }
+          .project-title {
+            font-size: 1.7rem !important;
+          }
+          .project-description {
+            font-size: 0.92rem !important;
+          }
+        }
+
+        @media (max-width: 1024px) {
+          .projects-section {
+            padding: 9rem 3rem 3rem 3rem !important;
+          }
+          .projects-title {
+            font-size: 3rem !important;
+            margin-bottom: 3rem !important;
+          }
+          .project-item {
+            padding: 1rem 0 2rem 0 !important;
+            margin-bottom: 2rem !important;
+          }
+          .project-title {
+            font-size: 1.5rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+          .project-description {
+            font-size: 0.88rem !important;
+          }
+          .project-link {
+            font-size: 0.9rem !important;
+          }
+      }
+        `}</style>
     </div>
   );
 };
