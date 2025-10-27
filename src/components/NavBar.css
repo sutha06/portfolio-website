@@ -40,12 +40,11 @@
   height: 120px;
   width: auto;
   object-fit: contain;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .navbar-logo img:hover {
   opacity: 0.8;
-  filter: drop-shadow(0 0 10px rgba(254, 254, 254, 0.3));
 }
 
 .navbar-links {
@@ -85,18 +84,72 @@
   white-space: nowrap;
 }
 
-/* Tablet - 1024px and below */
-@media (max-width: 1024px) {
+/* Large Laptop/Desktop - 1366px to 1920px */
+@media (max-width: 1366px) {
   .navbar {
-    padding: 1.5rem 2.5rem;
+    padding: 2.5rem 4rem;
   }
 
   .navbar-logo img {
-    height: 65px;
+    height: 100px;
   }
 
   .home-link {
+    font-size: 1.6rem;
+  }
+
+  .navbar-links {
+    gap: 3rem;
+  }
+
+  .nav-link {
+    font-size: 1.3rem;
+  }
+
+  .navbar-copyright span {
+    font-size: 1.4rem;
+  }
+}
+
+/* MacBook Pro 14" and similar - 1024px to 1366px */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 2rem 3rem;
+  }
+
+  .navbar-logo img {
+    height: 80px;
+  }
+
+  .home-link {
+    font-size: 1.4rem;
+  }
+
+  .navbar-links {
+    gap: 2.5rem;
+  }
+
+  .nav-link {
     font-size: 1.1rem;
+  }
+
+  .navbar-copyright span {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small Laptop - 768px to 1024px */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1.5rem 2rem;
+  }
+
+  .navbar-logo img {
+    height: 60px;
+  }
+
+  .home-link {
+    font-size: 1.2rem;
   }
 
   .navbar-links {
@@ -104,18 +157,18 @@
   }
 
   .nav-link {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
 
   .navbar-copyright span {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
-/* Mobile - 768px and below */
-@media (max-width: 768px) {
+/* iPad Pro and tablets - 600px to 768px */
+@media (max-width: 600px) {
   .navbar {
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 1.5rem;
   }
 
   .navbar-logo img {
@@ -131,18 +184,19 @@
   }
 
   .nav-link {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 
   .navbar-copyright span {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 }
 
-/* Small Mobile - 480px and below */
+/* Mobile - 480px and below */
 @media (max-width: 480px) {
   .navbar {
-    padding: 1rem;
+    padding: 1rem 1rem;
+    flex-wrap: wrap;
   }
 
   .navbar-logo img {
@@ -159,14 +213,14 @@
     gap: 1rem;
     flex: 1;
     justify-content: center;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
   }
 
   .nav-link {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
 
   .navbar-copyright span {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 }

@@ -11,6 +11,7 @@ const About = () => {
 
       {/* LEFT SIDE - Fixed Photo */}
       <div
+        className="about-photo"
         style={{
           position: "fixed",
           left: 0,
@@ -33,6 +34,7 @@ const About = () => {
 
       {/* RIGHT SIDE - Scrollable Content */}
       <div
+        className="about-content"
         style={{
           marginLeft: "50%",
           padding: "6rem 5rem",
@@ -51,6 +53,7 @@ const About = () => {
           }}
         >
           <p
+            className="about-label"
             style={{
               fontSize: "1.1rem",
               letterSpacing: "0.2em",
@@ -64,6 +67,7 @@ const About = () => {
           </p>
 
           <h1
+            className="about-title"
             style={{
               fontSize: "5rem",
               fontFamily: "Montserrat, sans-serif",
@@ -79,6 +83,7 @@ const About = () => {
           </h1>
 
           <p
+            className="about-description"
             style={{
               fontSize: "1.3rem",
               lineHeight: "1.8",
@@ -101,6 +106,91 @@ const About = () => {
         {/* Certifications Section */}
         <CertificationsCarousel />
       </div>
+
+      <style>{`
+        /* 4K and Large Displays */
+        @media (min-width: 2560px) {
+          .about-title {
+            font-size: 6rem !important;
+          }
+          .about-description {
+            font-size: 1.5rem !important;
+          }
+          .about-label {
+            font-size: 1.3rem !important;
+          }
+        }
+
+        /* Standard Laptop - 1440px */
+        @media (max-width: 1440px) {
+          .about-title {
+            font-size: 4.5rem !important;
+          }
+          .about-description {
+            font-size: 1.2rem !important;
+          }
+          .about-label {
+            font-size: 1rem !important;
+          }
+        }
+
+        /* Standard Laptop - 1366px (YOUR SMALL LAPTOP) */
+        @media (max-width: 1366px) {
+          .about-photo {
+            width: 45% !important;
+          }
+          .about-content {
+            margin-left: 45% !important;
+            padding: 5rem 3rem !important;
+          }
+          .about-title {
+            font-size: 3.5rem !important;
+          }
+          .about-description {
+            font-size: 1.05rem !important;
+          }
+          .about-label {
+            font-size: 0.95rem !important;
+          }
+        }
+
+        /* MacBook Pro 14" - 1280px */
+        @media (max-width: 1280px) {
+          .about-photo {
+            width: 42% !important;
+          }
+          .about-content {
+            margin-left: 42% !important;
+            padding: 5rem 2.5rem !important;
+          }
+          .about-title {
+            font-size: 3.3rem !important;
+          }
+          .about-description {
+            font-size: 1rem !important;
+          }
+        }
+
+        /* Small Laptop - 1024px */
+        @media (max-width: 1024px) {
+          .about-photo {
+            width: 40% !important;
+          }
+          .about-content {
+            margin-left: 40% !important;
+            padding: 4rem 2rem !important;
+          }
+          .about-title {
+            font-size: 3rem !important;
+          }
+          .about-description {
+            font-size: 0.95rem !important;
+          }
+          .about-label {
+            font-size: 0.85rem !important;
+          }
+        }
+      `}</style>
     </div>
   );
 };
@@ -148,6 +238,7 @@ const CertificationsCarousel = () => {
   return (
     <div style={{ marginTop: "4rem", paddingBottom: "4rem" }}>
       <h2
+        className="cert-title"
         style={{
           fontSize: "2.5rem",
           fontWeight: "500",
@@ -231,6 +322,36 @@ const CertificationsCarousel = () => {
             transform: translateY(-10px) rotate(180deg);
           }
         }
+
+        @media (min-width: 2560px) {
+          .cert-title {
+            font-size: 3rem !important;
+          }
+        }
+
+        @media (max-width: 1440px) {
+          .cert-title {
+            font-size: 2.3rem !important;
+          }
+        }
+
+        @media (max-width: 1366px) {
+          .cert-title {
+            font-size: 2rem !important;
+          }
+        }
+
+        @media (max-width: 1280px) {
+          .cert-title {
+            font-size: 1.9rem !important;
+          }
+        }
+
+        @media (max-width: 1024px) {
+          .cert-title {
+            font-size: 1.8rem !important;
+          }
+        }
       `}</style>
     </div>
   );
@@ -254,6 +375,7 @@ const CertificationCard = ({
 
   return (
     <motion.div
+      className="cert-card"
       style={{
         opacity,
         scale,
@@ -269,11 +391,13 @@ const CertificationCard = ({
       }}
     >
       <img
+        className="cert-image"
         src={image}
         alt={title}
         style={{ width: "200px", height: "200px", objectFit: "contain" }}
       />
       <h4
+        className="cert-card-title"
         style={{
           fontSize: "1.5rem",
           fontWeight: "500",
@@ -294,6 +418,7 @@ const CertificationCard = ({
         }}
       >
         <span
+          className="cert-status"
           style={{
             padding: "0.5rem 1rem",
             borderRadius: "20px",
@@ -310,6 +435,7 @@ const CertificationCard = ({
           {status}
         </span>
         <span
+          className="cert-date"
           style={{
             fontSize: "1rem",
             color: "#b5b5b5",
@@ -319,6 +445,71 @@ const CertificationCard = ({
           {date}
         </span>
       </div>
+
+      <style>{`
+        @media (min-width: 2560px) {
+          .cert-image {
+            width: 250px !important;
+            height: 250px !important;
+          }
+          .cert-card-title {
+            font-size: 1.8rem !important;
+          }
+        }
+
+        @media (max-width: 1440px) {
+          .cert-image {
+            width: 190px !important;
+            height: 190px !important;
+          }
+          .cert-card-title {
+            font-size: 1.4rem !important;
+          }
+        }
+
+        @media (max-width: 1366px) {
+          .cert-card {
+            padding: 2rem !important;
+            min-height: 320px !important;
+          }
+          .cert-image {
+            width: 150px !important;
+            height: 150px !important;
+          }
+          .cert-card-title {
+            font-size: 1.15rem !important;
+          }
+          .cert-status, .cert-date {
+            font-size: 0.9rem !important;
+          }
+        }
+
+        @media (max-width: 1280px) {
+          .cert-image {
+            width: 140px !important;
+            height: 140px !important;
+          }
+          .cert-card-title {
+            font-size: 1.1rem !important;
+          }
+        }
+
+        @media (max-width: 1024px) {
+          .cert-card {
+            padding: 1.5rem !important;
+          }
+          .cert-image {
+            width: 130px !important;
+            height: 130px !important;
+          }
+          .cert-card-title {
+            font-size: 1rem !important;
+          }
+          .cert-status, .cert-date {
+            font-size: 0.85rem !important;
+          }
+        }
+      `}</style>
     </motion.div>
   );
 };
