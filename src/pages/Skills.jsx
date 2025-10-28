@@ -4,17 +4,16 @@ import transition from "../components/Transition";
 import ScrollReveal from "../components/ScrollReveal";
 
 const Skills = () => {
-  const [scrollDirection, setScrollDirection] = useState("down");
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY) {
-        setScrollDirection("down");
-      } else if (currentScrollY < lastScrollY) {
-        setScrollDirection("up");
+      // Hide scroll indicator after user scrolls down 100px
+      if (currentScrollY > 100) {
+        setShowScrollIndicator(false);
       }
 
       setLastScrollY(currentScrollY);
@@ -232,7 +231,7 @@ const Skills = () => {
         </div>
 
         {/* Scroll Indicator */}
-        {scrollDirection === "down" && (
+        {showScrollIndicator && (
           <div
             style={{
               position: "absolute",
@@ -242,6 +241,8 @@ const Skills = () => {
               alignItems: "center",
               gap: "0.5rem",
               animation: "bounce 2s infinite",
+              opacity: 1,
+              transition: "opacity 0.5s ease",
             }}
           >
             <span
