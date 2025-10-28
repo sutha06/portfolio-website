@@ -56,7 +56,8 @@ const Projects = () => {
         style={{
           maxWidth: "1600px",
           margin: "0 auto",
-          padding: "14rem 6rem 6rem 6rem",
+          padding:
+            "14rem clamp(8rem, 14vw, 14rem) 6rem clamp(8rem, 14vw, 14rem)",
           color: "#fefefe",
           minHeight: "100vh",
         }}
@@ -174,97 +175,29 @@ const Projects = () => {
       </section>
 
       <style>{`
-  @media (min-width: 2560px) {
-          .projects-section {
-            padding: 16rem 8rem 8rem 8rem !important;
-          }
-          .projects-title {
-            font-size: 5rem !important;
-          }
-          .project-title {
-            font-size: 2.5rem !important;
-          }
-          .project-description {
-            font-size: 1.3rem !important;
-          }
-          .project-link {
-            font-size: 1.2rem !important;
-          }
-        }
+  .projects-title {
+    font-size: clamp(3rem, 4vw, 4rem) !important;
+    margin-bottom: clamp(3rem, 6vw, 6rem) !important;
+  }
 
-        @media (max-width: 1440px) {
-          .projects-section {
-            padding: 12rem 5rem 5rem 5rem !important;
-          }
-          .projects-title {
-            font-size: 3.8rem !important;
-          }
-          .project-title {
-            font-size: 1.9rem !important;
-          }
-          .project-description {
-            font-size: 0.98rem !important;
-          }
-        }
+  .project-item {
+    padding: clamp(1rem, 1.5vw, 1.5rem) 0 clamp(2rem, 3vw, 3rem) 0 !important;
+    margin-bottom: clamp(2rem, 3vw, 3rem) !important;
+  }
 
-        @media (max-width: 1366px) {
-          .projects-section {
-            padding: 11rem 4rem 4rem 4rem !important;
-          }
-          .projects-title {
-            font-size: 3.5rem !important;
-            margin-bottom: 4rem !important;
-          }
-          .project-title {
-            font-size: 1.8rem !important;
-          }
-          .project-description {
-            font-size: 0.95rem !important;
-          }
-          .project-link {
-            font-size: 0.95rem !important;
-          }
-        }
+  .project-title {
+    font-size: clamp(1.5rem, 2vw, 2rem) !important;
+    margin-bottom: clamp(0.5rem, 0.75vw, 0.75rem) !important;
+  }
 
-        @media (max-width: 1280px) {
-          .projects-section {
-            padding: 10rem 3.5rem 4rem 3.5rem !important;
-          }
-          .projects-title {
-            font-size: 3.3rem !important;
-          }
-          .project-title {
-            font-size: 1.7rem !important;
-          }
-          .project-description {
-            font-size: 0.92rem !important;
-          }
-        }
+  .project-description {
+    font-size: clamp(0.88rem, 1vw, 1rem) !important;
+  }
 
-        @media (max-width: 1024px) {
-          .projects-section {
-            padding: 9rem 3rem 3rem 3rem !important;
-          }
-          .projects-title {
-            font-size: 3rem !important;
-            margin-bottom: 3rem !important;
-          }
-          .project-item {
-            padding: 1rem 0 2rem 0 !important;
-            margin-bottom: 2rem !important;
-          }
-          .project-title {
-            font-size: 1.5rem !important;
-            margin-bottom: 0.5rem !important;
-          }
-          .project-description {
-            font-size: 0.88rem !important;
-          }
-          .project-link {
-            font-size: 0.9rem !important;
-          }
-      }
-        `}</style>
+  .project-link {
+    font-size: clamp(0.9rem, 1vw, 1rem) !important;
+  }
+`}</style>
     </div>
   );
 };

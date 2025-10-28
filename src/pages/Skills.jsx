@@ -182,6 +182,7 @@ const Skills = () => {
 
       {/* Hero Section */}
       <div
+        className="skills-hero"
         style={{
           height: "100vh",
           display: "flex",
@@ -199,6 +200,7 @@ const Skills = () => {
           }}
         >
           <h1
+            className="skills-title"
             style={{
               fontSize: "clamp(3rem, 8vw, 6rem)",
               fontWeight: "700",
@@ -214,8 +216,9 @@ const Skills = () => {
             MY SKILLS
           </h1>
           <p
+            className="skills-subtitle"
             style={{
-              fontSize: "1.2rem",
+              fontSize: "clamp(0.9rem, 1.5vw, 1.2rem)",
               lineHeight: "1.8",
               color: "#b5b5b5",
               fontFamily: "Montserrat, sans-serif",
@@ -269,19 +272,20 @@ const Skills = () => {
 
       {/* Skills List Section */}
       <div
+        className="skills-list-section"
         style={{
-          maxWidth: "1400px",
+          maxWidth: "1600px",
           margin: "0 auto",
-          paddingTop: "4rem",
-          paddingBottom: "15vh",
+          padding: "4rem clamp(3rem, 6vw, 6rem) 15vh clamp(10rem, 16vw, 16rem)",
           position: "relative",
         }}
       >
         {categories.map((category, catIndex) => (
           <div key={catIndex} style={{ marginBottom: "4rem" }}>
             <h3
+              className="category-title"
               style={{
-                fontSize: "1.2rem",
+                fontSize: "clamp(0.6rem, 0.75vw, 0.9rem)",
                 fontWeight: "600",
                 color: "#b5b5b5",
                 fontFamily: "Montserrat, sans-serif",
@@ -293,7 +297,12 @@ const Skills = () => {
             </h3>
 
             <div
-              style={{ fontSize: "2rem", lineHeight: "2", color: "#b5b5b5" }}
+              className="skill-names"
+              style={{
+                fontSize: "clamp(0.9rem, 2.2vw, 3rem)",
+                lineHeight: "1.4",
+                color: "#b5b5b5",
+              }}
             >
               {skillsData
                 .filter((skill) => skill.category === category)

@@ -19,7 +19,7 @@ const Contact = () => {
         style={{
           display: "grid",
           gridTemplateColumns: "50% 50%",
-          padding: "0 6rem",
+          padding: "0 clamp(3rem, 6vw, 6rem)",
           gap: "2rem",
           maxWidth: "100%",
           height: "100vh",
@@ -33,15 +33,15 @@ const Contact = () => {
             flexDirection: "column",
             justifyContent: "center",
             color: "#fefefe",
-            paddingLeft: "2rem",
+            paddingLeft: "clamp(0rem, 2vw, 2rem)",
           }}
         >
           <h1
             style={{
-              fontSize: "10rem",
+              fontSize: "clamp(4rem, 10vw, 10rem)",
               fontWeight: "700",
               lineHeight: "1.2",
-              marginBottom: "4rem",
+              marginBottom: "clamp(2rem, 4vw, 4rem)",
               fontFamily: "Montserrat, sans-serif",
               letterSpacing: "-0.02em",
               marginTop: "-3rem",
@@ -55,8 +55,8 @@ const Contact = () => {
 
           <p
             style={{
-              fontSize: "1.3rem",
-              marginBottom: "3rem",
+              fontSize: "clamp(0.9rem, 1.3vw, 1.3rem)",
+              marginBottom: "clamp(1.5rem, 3vw, 3rem)",
               fontFamily: "Montserrat, sans-serif",
               fontWeight: "400",
               lineHeight: "1.8",
@@ -78,7 +78,7 @@ const Contact = () => {
             <div>
               <span
                 style={{
-                  fontSize: "1.3rem",
+                  fontSize: "clamp(0.9rem, 1.3vw, 1.3rem)",
                   fontFamily: "Montserrat, sans-serif",
                   fontWeight: "400",
                   color: "#b5b5b5",
@@ -89,7 +89,7 @@ const Contact = () => {
               <a
                 href="mailto:SUTHAKARAN.SIVA0601@GMAIL.COM"
                 style={{
-                  fontSize: "1.3rem",
+                  fontSize: "clamp(0.9rem, 1.3vw, 1.3rem)",
                   fontFamily: "Montserrat, sans-serif",
                   fontWeight: "400",
                   color: "#fefefe",
@@ -110,7 +110,7 @@ const Contact = () => {
             <div>
               <span
                 style={{
-                  fontSize: "1.3rem",
+                  fontSize: "clamp(0.9rem, 1.3vw, 1.3rem)",
                   fontFamily: "Montserrat, sans-serif",
                   fontWeight: "400",
                   color: "#b5b5b5",
@@ -121,7 +121,7 @@ const Contact = () => {
               <a
                 href="tel:+14167107465"
                 style={{
-                  fontSize: "1.3rem",
+                  fontSize: "clamp(0.9rem, 1.3vw, 1.3rem)",
                   fontFamily: "Montserrat, sans-serif",
                   fontWeight: "400",
                   color: "#fefefe",
@@ -148,9 +148,9 @@ const Contact = () => {
             flexDirection: "column",
             justifyContent: "flex-end",
             alignItems: "flex-end",
-            gap: "2rem",
-            paddingRight: "6rem",
-            paddingBottom: "6rem",
+            gap: "clamp(0.8rem, 1.5vw, 2rem)",
+            paddingRight: "clamp(3rem, 5vw, 6rem)",
+            paddingBottom: "clamp(4rem, 5vw, 6rem)",
             height: "100%",
           }}
         >
@@ -158,9 +158,7 @@ const Contact = () => {
           <FlipLink href="https://www.linkedin.com/in/suthasiv/">
             LINKEDIN
           </FlipLink>
-          <FlipLink href="https://tryhackme.com/p/Sutha">
-            TRYHACKME
-          </FlipLink>
+          <FlipLink href="https://tryhackme.com/p/Sutha">TRYHACKME</FlipLink>
         </div>
       </div>
     </div>
@@ -183,7 +181,7 @@ const FlipLink = ({ children, href }) => {
         display: "block",
         overflow: "hidden",
         whiteSpace: "nowrap",
-        fontSize: "7rem",
+        fontSize: "clamp(2.5rem, 5.5vw, 7rem)",
         fontWeight: "700",
         textTransform: "uppercase",
         fontFamily: "Montserrat, sans-serif",

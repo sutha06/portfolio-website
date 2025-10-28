@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 5rem;
+  padding: clamp(1.5rem, 3vw, 3rem) clamp(2rem, 5vw, 5rem);
   z-index: 1000;
   background: transparent;
   max-width: 100%;
@@ -25,7 +25,7 @@
 .home-link {
   color: #fefefe;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 1.8vw, 1.8rem);
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.1em;
@@ -37,7 +37,7 @@
 }
 
 .navbar-logo img {
-  height: 120px;
+  height: clamp(60px, 12vw, 120px);
   width: auto;
   object-fit: contain;
   transition: opacity 0.3s ease;
@@ -50,7 +50,7 @@
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: clamp(1.5rem, 4vw, 4rem);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -59,7 +59,7 @@
 .nav-link {
   color: #b5b5b5;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: clamp(0.85rem, 1.5vw, 1.5rem);
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.1em;
@@ -77,150 +77,24 @@
 
 .navbar-copyright span {
   color: #fefefe;
-  font-size: 1.6rem;
+  font-size: clamp(0.9rem, 1.6vw, 1.6rem);
   font-weight: 300;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.05em;
   white-space: nowrap;
 }
 
-/* Large Laptop/Desktop - 1366px to 1920px */
-@media (max-width: 1366px) {
-  .navbar {
-    padding: 2.5rem 4rem;
-  }
-
-  .navbar-logo img {
-    height: 100px;
-  }
-
-  .home-link {
-    font-size: 1.6rem;
-  }
-
-  .navbar-links {
-    gap: 3rem;
-  }
-
-  .nav-link {
-    font-size: 1.3rem;
-  }
-
-  .navbar-copyright span {
-    font-size: 1.4rem;
-  }
-}
-
-/* MacBook Pro 14" and similar - 1024px to 1366px */
-@media (max-width: 1024px) {
-  .navbar {
-    padding: 2rem 3rem;
-  }
-
-  .navbar-logo img {
-    height: 80px;
-  }
-
-  .home-link {
-    font-size: 1.4rem;
-  }
-
-  .navbar-links {
-    gap: 2.5rem;
-  }
-
-  .nav-link {
-    font-size: 1.1rem;
-  }
-
-  .navbar-copyright span {
-    font-size: 1.2rem;
-  }
-}
-
-/* Small Laptop - 768px to 1024px */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 1.5rem 2rem;
-  }
-
-  .navbar-logo img {
-    height: 60px;
-  }
-
-  .home-link {
-    font-size: 1.2rem;
-  }
-
-  .navbar-links {
-    gap: 2rem;
-  }
-
-  .nav-link {
-    font-size: 0.95rem;
-  }
-
-  .navbar-copyright span {
-    font-size: 1rem;
-  }
-}
-
-/* iPad Pro and tablets - 600px to 768px */
-@media (max-width: 600px) {
-  .navbar {
-    padding: 1.5rem 1.5rem;
-  }
-
-  .navbar-logo img {
-    height: 50px;
-  }
-
-  .home-link {
-    font-size: 1rem;
-  }
-
-  .navbar-links {
-    gap: 1.5rem;
-  }
-
-  .nav-link {
-    font-size: 0.85rem;
-  }
-
-  .navbar-copyright span {
-    font-size: 0.9rem;
-  }
-}
-
-/* Mobile - 480px and below */
+/* Mobile adjustments - only for layout changes */
 @media (max-width: 480px) {
   .navbar {
-    padding: 1rem 1rem;
     flex-wrap: wrap;
-  }
-
-  .navbar-logo img {
-    height: 40px;
-  }
-
-  .home-link {
-    font-size: 0.9rem;
   }
 
   .navbar-links {
     position: static;
     transform: none;
-    gap: 1rem;
     flex: 1;
     justify-content: center;
     margin: 0 0.5rem;
-  }
-
-  .nav-link {
-    font-size: 0.7rem;
-  }
-
-  .navbar-copyright span {
-    font-size: 0.8rem;
   }
 }
