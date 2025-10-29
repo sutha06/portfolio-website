@@ -8,36 +8,36 @@ const Projects = () => {
       title: "Portfolio Website",
       description:
         "Modern, animated portfolio website showcasing my skills and experience",
-      link: "#",
+      link: "https://github.com/sutha06/portfolio-website",
     },
     {
       title: "NFC Business Card",
       description:
         "A digital business card accessed via NFC I built from scratch",
-      link: "#",
+      link: "https://github.com/sutha06/nfc-business-card",
     },
     {
       title: "Legal Lens",
       description:
         "Hackathon winner: AI-powered legal document analyzer that simplifies complex legal text",
-      link: "#",
+      link: "https://github.com/aleksbrsc/Legal-Lens",
     },
     {
       title: "FoodFinder App",
       description: "Mobile app to help users to discover nearby restaurants",
-      link: "#",
+      link: "https://github.com/kasperFlo/FoodFinderApp",
     },
     {
       title: "PicPick",
       description:
         "Hackathon project: visual shopping interface for multiple online commerce platforms",
-      link: "#",
+      link: "https://github.com/kasperFlo/PicPick",
     },
     {
       title: "WiFi Analyzer",
       description:
         "Arduino-based WiFi network analyzer for signal strength monitoring and network diagnostics",
-      link: "#",
+      link: "https://github.com/sutha06/Wifi-Analyzer",
     },
   ];
 
