@@ -27,12 +27,12 @@ function Navbar({ showLinks = true, showHome = false }) {
             GITHUB
           </a>
           <a
-            href="https://tryhackme.com/p/Sutha"
+            href="https://labex.io/users/suthakaran-siva-01096458?tab=skilltrees"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-link"
           >
-            TRYHACKME
+            LABEX
           </a>
           <a
             href="https://www.linkedin.com/in/suthasiv/"

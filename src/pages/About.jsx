@@ -208,30 +208,37 @@ const CertificationsCarousel = () => {
       image: "/images/GCC_badge_IT_Support.png",
       status: "Completed",
       date: "September 2025",
+      credentialUrl:
+        "https://www.credly.com/badges/4d010022-c90b-42df-81f8-05876d7c3176/public_url",
     },
     {
       title: "CompTIA Security+ Certificate",
       image: "/images/security.png",
-      status: "In Progress",
+      status: "Completed",
       date: "Expected November 2025",
+      credentialUrl:
+        "https://www.credly.com/badges/4ccc6ee2-e1e4-48be-8b60-9523043721ac/public_url",
     },
     {
       title: "RedHat Certified System Administrator (RHCSA) Certificate",
       image: "/images/redhat.png",
       status: "In Progress",
       date: "Expected December 2025",
+      credentialUrl: null,
     },
     {
       title: "CompTIA Network+ Certificate",
       image: "/images/network.png",
       status: "In Progress",
       date: "Expected January 2026",
+      credentialUrl: null,
     },
     {
       title: "Microsoft Azure Administrator Certificate",
       image: "/images/azure.png",
       status: "In Progress",
       date: "January 2026",
+      credentialUrl: null,
     },
   ];
 
@@ -265,6 +272,7 @@ const CertificationsCarousel = () => {
             image={cert.image}
             status={cert.status}
             date={cert.date}
+            credentialUrl={cert.credentialUrl}
           />
         ))}
       </div>
@@ -365,6 +373,7 @@ const CertificationCard = ({
   image,
   status,
   date,
+  credentialUrl,
 }) => {
   const stepSize = 1 / numItems;
   const end = stepSize * position;
@@ -444,6 +453,22 @@ const CertificationCard = ({
         >
           {date}
         </span>
+        {credentialUrl ? (
+          <a
+            className="cert-credential"
+            href={credentialUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontSize: "1rem",
+              color: "#b5b5b5",
+              fontFamily: "Montserrat, sans-serif",
+              textDecoration: "underline",
+            }}
+          >
+            View Credential
+          </a>
+        ) : null}
       </div>
 
       <style>{`
