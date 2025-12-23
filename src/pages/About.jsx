@@ -215,9 +215,16 @@ const CertificationsCarousel = () => {
       title: "CompTIA Security+ Certificate",
       image: "/images/security.png",
       status: "Completed",
-      date: "Expected November 2025",
+      date: "November 2025",
       credentialUrl:
         "https://www.credly.com/badges/4ccc6ee2-e1e4-48be-8b60-9523043721ac/public_url",
+    },
+    {
+      title: "AWS Certified Cloud Practitioner",
+      image: "/images/awsccp.png",
+      status: "Completed",
+      date: "December 2025",
+      credentialUrl: null,
     },
     {
       title: "RedHat Certified System Administrator (RHCSA) Certificate",
