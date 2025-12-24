@@ -224,7 +224,8 @@ const CertificationsCarousel = () => {
       image: "/images/awsccp.png",
       status: "Completed",
       date: "December 2025",
-      credentialUrl: null,
+      credentialUrl:
+        "https://www.credly.com/badges/d4390f6d-0281-4d46-bba9-3df94f129464/public_url",
     },
     {
       title: "RedHat Certified System Administrator (RHCSA) Certificate",

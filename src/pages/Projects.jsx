@@ -34,6 +34,12 @@ const Projects = () => {
       link: "https://github.com/kasperFlo/PicPick",
     },
     {
+      title: "Password Generator",
+      description:
+        "A password generator that generates strong and secure passwords",
+      link: "https://github.com/sutha06/password-generator",
+    },
+    {
       title: "WiFi Analyzer",
       description:
         "Arduino-based WiFi network analyzer for signal strength monitoring and network diagnostics",
